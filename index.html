@@ -1,0 +1,1667 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Pennora — Free Personal Finance Calculators (Net Worth, Paycheck, Income Tax, Loan, Amortization, Compound Interest, FIRE)</title>
+<meta name="description" content="Pennora is a free, bilingual suite of personal finance calculators: loan and amortization schedules, net worth benchmark by age, paycheck (take-home) estimator, U.S. income tax estimator, compound interest (inflation-adjusted), savings goal planner, inflation adjuster, emergency fund, and FIRE. Private, browser-only, no sign-up." />
+<meta name="keywords" content="loan calculator, amortization calculator, auto loan calculator, net worth calculator, paycheck calculator, take-home pay, income tax calculator, tax estimator, inflation adjusted calculator, compound interest calculator, savings goal calculator, inflation calculator, emergency fund calculator, FIRE calculator, 贷款计算器, 摊销计算器, 车贷计算器, 净资产计算器, 工资计算器, 到手工资, 所得税计算器, 个税估算, 通胀调整计算器, 复利计算器, 储蓄目标计算器, 通胀计算器, 应急基金, 财务自由计算器" />
+<link rel="canonical" href="https://pennora.com/" />
+<link rel="alternate" hreflang="en" href="https://pennora.com/" />
+<link rel="alternate" hreflang="zh" href="https://pennora.com/" />
+<link rel="alternate" hreflang="x-default" href="https://pennora.com/" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Pennora — Free Personal Finance Calculators" />
+<meta property="og:description" content="Net worth, paycheck, income tax, compound interest, savings goals, inflation, emergency fund, and FIRE — free, private, bilingual." />
+<meta property="og:url" content="https://pennora.com/" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:locale:alternate" content="zh_CN" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Pennora — Free Personal Finance Calculators" />
+<meta name="twitter:description" content="Net worth, paycheck, income tax, compound interest, savings goals, inflation, emergency fund, and FIRE — free, private, bilingual." />
+<meta property="og:image" content="https://pennora.com/og-image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Pennora — free bilingual personal finance calculators: loan, amortization, net worth, paycheck, income tax, compound interest, FIRE." />
+<meta name="twitter:image" content="https://pennora.com/og-image.png" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Pennora",
+  "url": "https://pennora.com/",
+  "description": "A free, bilingual suite of personal finance calculators.",
+  "inLanguage": ["en", "zh"],
+  "dateModified": "2026-07-12"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Pennora",
+  "url": "https://pennora.com/",
+  "description": "An indie, bilingual suite of private, browser-only personal finance calculators (loan, amortization, net worth, paycheck, income tax, compound interest, savings, inflation, emergency fund, FIRE).",
+  "inLanguage": ["en", "zh"],
+  "dateModified": "2026-07-12"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Pennora Finance Tools",
+  "itemListElement": [
+    {"@type":"ListItem","position":1,"name":"Compound Interest Calculator"},
+    {"@type":"ListItem","position":2,"name":"Savings Goal Planner"},
+    {"@type":"ListItem","position":3,"name":"Paycheck Calculator (Take-Home Pay)"},
+    {"@type":"ListItem","position":4,"name":"Income Tax Calculator"},
+    {"@type":"ListItem","position":5,"name":"Inflation Adjuster"},
+    {"@type":"ListItem","position":6,"name":"Emergency Fund Calculator"},
+    {"@type":"ListItem","position":7,"name":"FIRE Calculator"},
+    {"@type":"ListItem","position":8,"name":"Net Worth & Goals"},
+    {"@type":"ListItem","position":9,"name":"Amortization Calculator"},
+    {"@type":"ListItem","position":10,"name":"Loan Calculator"}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"How does compound interest work?","acceptedAnswer":{"@type":"Answer","text":"Compound interest means you earn returns not only on your original money but also on the returns it has already earned. The more frequently interest compounds and the longer you wait, the faster your balance grows."}},
+    {"@type":"Question","name":"How is my take-home pay calculated?","acceptedAnswer":{"@type":"Answer","text":"Start with gross pay, subtract pre-tax 401(k) and health premiums, then withhold federal income tax using marginal brackets, state income tax, and FICA (Social Security 6.2% plus Medicare 1.45%, with an extra 0.9% above $200,000). What remains is your net pay."}},
+    {"@type":"Question","name":"How big should my emergency fund be?","acceptedAnswer":{"@type":"Answer","text":"A common rule is three to six months of essential expenses. If your income is unstable or you have dependents, aim for six to nine months."}},
+    {"@type":"Question","name":"What is a FIRE number?","acceptedAnswer":{"@type":"Answer","text":"Your FIRE number is the invested portfolio size that lets you cover living expenses from returns. A common estimate divides annual spending by a safe withdrawal rate, often 4%, so the target is about 25 times your yearly spending."}},
+    {"@type":"Question","name":"Is my data uploaded or stored?","acceptedAnswer":{"@type":"Answer","text":"No. All calculations run locally in your browser. Pennora does not collect, upload, or sell any financial information you enter."}},
+    {"@type":"Question","name":"Why show inflation-adjusted values?","acceptedAnswer":{"@type":"Answer","text":"A dollar today will not buy the same in 20 years. Our compound and FIRE calculators can show results in today's purchasing power so you see what your money is really worth, not just the nominal number."}}
+  ]
+}
+</script>
+<style>
+  :root{
+    --bg:#f4f8f6; --surface:#ffffff; --surface-2:#eef4f1; --border:#e1ebe6;
+    --text:#11201b; --muted:#5d6f67; --primary:#0f9d6e; --primary-d:#0c7f59;
+    --accent:#2f6df0; --accent-d:#1f53c4; --warn:#c2703a; --good:#0f9d6e;
+    --shadow:0 1px 2px rgba(16,32,27,.05),0 8px 24px rgba(16,32,27,.06);
+    --radius:16px; --maxw:1080px;
+  }
+  html[data-theme="dark"]{
+    --bg:#0e1714; --surface:#16211c; --surface-2:#1d2b25; --border:#26352e;
+    --text:#e8f0ec; --muted:#9bb0a7; --primary:#21c08c; --primary-d:#19a374;
+    --accent:#5b8dff; --accent-d:#4174f0; --warn:#e09a63; --good:#21c08c;
+    --shadow:0 1px 2px rgba(0,0,0,.3),0 10px 30px rgba(0,0,0,.35);
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+    background:var(--bg); color:var(--text); line-height:1.6; -webkit-font-smoothing:antialiased;
+  }
+  a{color:var(--primary-d); text-decoration:none}
+  a:hover{text-decoration:underline}
+  .wrap{max-width:var(--maxw); margin:0 auto; padding:0 20px}
+  /* Header */
+  header{
+    position:sticky; top:0; z-index:50; background:color-mix(in srgb, var(--surface) 88%, transparent);
+    backdrop-filter:saturate(140%) blur(10px); border-bottom:1px solid var(--border);
+  }
+  .nav{display:flex; align-items:center; gap:14px; height:64px}
+  .logo{display:flex; align-items:center; gap:10px; font-weight:800; font-size:20px; letter-spacing:-.02em; color:var(--text)}
+  .logo .mark{width:30px;height:30px;flex:0 0 auto}
+  .spacer{flex:1}
+  .toggle-btn{
+    border:1px solid var(--border); background:var(--surface); color:var(--text);
+    border-radius:999px; padding:8px 14px; font-size:14px; cursor:pointer; font-weight:600;
+    display:inline-flex; align-items:center; gap:6px;
+  }
+  .toggle-btn:hover{border-color:var(--primary)}
+  .lang-btn{min-width:84px; justify-content:center}
+  /* Hero */
+  .hero{padding:54px 0 30px; background:radial-gradient(1200px 400px at 80% -10%, color-mix(in srgb,var(--primary) 18%, transparent), transparent 60%);}
+  .hero h1{font-size:clamp(28px,4.4vw,46px); line-height:1.12; margin:0 0 14px; letter-spacing:-.02em; max-width:18ch}
+  .hero p{font-size:18px; color:var(--muted); max-width:60ch; margin:0 0 22px}
+  .hero .badges{display:flex; gap:10px; flex-wrap:wrap; margin-bottom:8px}
+  .badge{background:var(--surface); border:1px solid var(--border); border-radius:999px; padding:6px 12px; font-size:13px; color:var(--muted); box-shadow:var(--shadow)}
+  /* Tool nav */
+  .toolnav{display:flex; gap:10px; flex-wrap:wrap; max-width:1080px; margin:0 auto; padding:12px 20px; position:sticky; top:0; z-index:30; background:var(--bg); border-bottom:1px solid var(--border)}
+  .toolnav button{
+    border:1px solid var(--border); background:var(--surface); color:var(--text);
+    border-radius:12px; padding:10px 14px; font-size:14px; font-weight:600; cursor:pointer;
+    display:flex; align-items:center; gap:8px; transition:.15s;
+  }
+  .toolnav button:hover{border-color:var(--primary); transform:translateY(-1px)}
+  .toolnav button.active{background:var(--primary); border-color:var(--primary); color:#fff}
+  .toolnav button .ic{width:18px;height:18px;flex:0 0 auto}
+  /* Sections */
+  section.block{display:none; padding:30px 0; border-top:1px solid var(--border)}
+  section.block.active{display:block}
+  .card{background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); box-shadow:var(--shadow); padding:22px}
+  .tool-head{display:flex; align-items:flex-start; gap:14px; margin-bottom:6px}
+  .tool-head .ic{width:34px;height:34px;flex:0 0 auto; margin-top:2px}
+  .tool-head h2{margin:0; font-size:22px; letter-spacing:-.01em}
+  .tool-head p{margin:4px 0 0; color:var(--muted); font-size:14px}
+  .grid2{display:grid; grid-template-columns:1fr 1fr; gap:18px}
+  @media(max-width:820px){.grid2{grid-template-columns:1fr}}
+  .field{margin:12px 0}
+  .field label{display:block; font-size:13px; font-weight:600; color:var(--muted); margin-bottom:6px}
+  .field .hint{font-weight:400; font-size:12px; opacity:.8}
+  input[type=number], select{
+    width:100%; padding:11px 12px; border:1px solid var(--border); border-radius:10px;
+    background:var(--surface-2); color:var(--text); font-size:15px; font-family:inherit;
+  }
+  input:focus, select:focus{outline:2px solid color-mix(in srgb,var(--primary) 45%, transparent); border-color:var(--primary)}
+  .calc-btn{
+    margin-top:8px; background:var(--primary); color:#fff; border:none; border-radius:10px;
+    padding:12px 18px; font-size:15px; font-weight:700; cursor:pointer; width:100%;
+  }
+  .calc-btn:hover{background:var(--primary-d)}
+  .result{margin-top:16px; padding:20px; background:var(--surface-2); border:1px solid var(--border); border-radius:14px}
+  .stat-row{display:grid; grid-template-columns:repeat(auto-fit,minmax(140px,1fr)); gap:12px; margin:12px 0}
+  .stat{background:var(--surface-2); border:1px solid var(--border); border-radius:12px; padding:14px; min-width:0; overflow:hidden}
+  .stat .k{font-size:12px; color:var(--muted); font-weight:600; overflow:hidden; text-overflow:ellipsis; white-space:nowrap}
+  .stat .v{font-size:clamp(17px,1.3vw + 12px,22px); font-weight:800; margin-top:4px; letter-spacing:-.01em; line-height:1.15; overflow-wrap:anywhere; word-break:break-word}
+  .stat.primary .v{color:var(--primary-d)}
+  .note{font-size:13px; color:var(--muted); margin-top:10px; border-left:3px solid var(--primary); padding:6px 12px; background:var(--surface-2); border-radius:0 8px 8px 0}
+  .chart{margin-top:14px; width:100%}
+  .legend{display:flex; gap:16px; flex-wrap:wrap; font-size:13px; color:var(--muted); margin-top:6px}
+  .legend i{display:inline-block; width:12px; height:12px; border-radius:3px; margin-right:6px; vertical-align:middle}
+  .empty{color:var(--muted); font-size:14px; padding:14px; text-align:center; border:1px dashed var(--border); border-radius:12px}
+  /* FAQ */
+  details.faq{background:var(--surface); border:1px solid var(--border); border-radius:12px; padding:4px 16px; margin:10px 0}
+  details.faq summary{cursor:pointer; font-weight:700; padding:12px 0; list-style:none}
+  details.faq summary::-webkit-details-marker{display:none}
+  details.faq summary::after{content:"+"; float:right; color:var(--muted); font-weight:700}
+  details.faq[open] summary::after{content:"\2212"}
+  details.faq .ans{padding:0 0 14px; color:var(--muted)}
+  /* Affiliate */
+  .books{display:grid; grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); gap:14px; margin-top:14px}
+  .book{background:var(--surface); border:1px solid var(--border); border-radius:12px; padding:14px; display:flex; flex-direction:column; gap:8px}
+  .book .t{font-weight:700; font-size:15px}
+  .book .a{font-size:13px; color:var(--muted)}
+  .book .buy{margin-top:auto; background:var(--accent); color:#fff; text-align:center; border-radius:9px; padding:9px 12px; font-weight:700; font-size:14px}
+  .book .buy:hover{background:var(--accent-d); text-decoration:none}
+  .disclaimer{font-size:12px; color:var(--muted); margin-top:12px}
+  /* Footer */
+  footer{border-top:1px solid var(--border); padding:30px 0 50px; color:var(--muted); font-size:14px}
+  footer .cols{display:grid; grid-template-columns:2fr 1fr 1fr; gap:24px}
+  @media(max-width:720px){footer .cols{grid-template-columns:1fr}}
+  footer h4{color:var(--text); font-size:14px; margin:0 0 10px}
+  footer ul{list-style:none; padding:0; margin:0}
+  footer li{margin:6px 0}
+  .foot-note{margin-top:24px; font-size:12px; line-height:1.7}
+  .skip{position:absolute;left:-9999px}
+  /* ===== Google AdSense placeholder slots (inert until activated) ===== */
+  .ad-slot{display:flex;align-items:center;justify-content:center;min-height:90px;margin:18px 0;padding:12px;border:1px dashed color-mix(in srgb,var(--primary) 35%, var(--border));border-radius:14px;background:color-mix(in srgb,var(--primary) 6%, var(--card));}
+  .ad-label{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);}
+  /* inflation toggle + net worth */
+  .toggle-row{display:flex;align-items:center;gap:10px;margin:12px 0 4px;font-size:14px;color:var(--muted);cursor:pointer}
+  .toggle-row input[type=checkbox]{width:18px;height:18px;accent-color:var(--primary);cursor:pointer}
+  .median-table{width:100%;border-collapse:collapse;margin-top:6px;font-size:13px}
+  .median-table th,.median-table td{border-bottom:1px solid var(--border);padding:7px 8px;text-align:left}
+  .median-table th{color:var(--muted);font-weight:700}
+  .standing{display:inline-block;background:color-mix(in srgb,var(--primary) 14%,var(--surface-2));border:1px solid var(--primary);border-radius:999px;padding:3px 12px;font-weight:800;color:var(--primary-d);font-size:14px}
+</style>
+
+<!-- Google AdSense — Auto Ads mode (PLACEHOLDER, inert).
+     To activate: (1) replace ca-pub-XXXXXXXXXXXXXX with your real publisher ID,
+     (2) remove the comment markers around the <script> line below. No other code changes needed. -->
+
+  <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXX" crossorigin="anonymous"></script> -->
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <div class="logo">
+      <svg class="mark" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+        <circle cx="16" cy="16" r="14" fill="var(--primary)"/>
+        <path d="M16 9v14M11 13.5c0-2 2.2-3.5 5-3.5s5 1.5 5 3.5-2.2 3-5 3-5 1.5-5 3.5 2.2 3.5 5 3.5" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+      <span>Pennora</span>
+    </div>
+    <div class="spacer"></div>
+    <button class="toggle-btn" id="themeBtn" aria-label="Toggle theme">🌓 <span data-i18n="theme">Theme</span></button>
+    <button class="toggle-btn lang-btn" id="langBtn" aria-label="Switch language">中文 / EN</button>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap">
+    <div class="badges">
+      <span class="badge" data-i18n="badge1">✓ Free &amp; private</span>
+      <span class="badge" data-i18n="badge2">✓ No sign-up</span>
+      <span class="badge" data-i18n="badge3">✓ English / 中文</span>
+    </div>
+    <h1 data-i18n="heroTitle">Money tools that actually make sense.</h1>
+    <p data-i18n="heroSub">Ten clear calculators for loans, amortization, net worth, paycheck, income tax, saving, inflation, and early retirement. Everything runs in your browser — nothing is uploaded, ever.</p>
+  </div>
+</div>
+
+
+<div class="tools-shell">
+  <nav class="toolnav" id="toolnav" aria-label="Tools"></nav>
+</div>
+
+<!-- TOOL 1: COMPOUND INTEREST -->
+<section class="block" id="tool-compound">
+  <div class="wrap">
+    <div class="card">
+      <div class="tool-head">
+        <svg class="ic" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 17l5-5 4 3 8-8" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M16 7h4v4" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <div>
+          <h2 data-i18n="t_compound_title">Compound Interest Calculator</h2>
+          <p data-i18n="t_compound_desc">See how a starting amount plus regular contributions grows over time.</p>
+        </div>
+      </div>
+      <div class="grid2">
+        <div>
+          <div class="field"><label data-i18n="ci_principal_l">Starting amount (USD)</label><input type="number" id="ci_principal" value="1000" min="0" step="100" /></div>
+          <div class="field"><label data-i18n="ci_monthly_l">Monthly contribution (USD)</label><input type="number" id="ci_monthly" value="200" min="0" step="50" /></div>
+          <div class="field"><label data-i18n="ci_rate_l">Annual return rate (%)</label><input type="number" id="ci_rate" value="7" min="0" max="30" step="0.1" /></div>
+          <div class="field"><label data-i18n="ci_freq_l">Compounding frequency</label>
+            <select id="ci_freq">
+              <option value="1" data-i18n="f_yearly">Yearly</option>
+              <option value="4" data-i18n="f_quarterly">Quarterly</option>
+              <option value="12" selected data-i18n="f_monthly">Monthly</option>
+              <option value="52" data-i18n="f_weekly">Weekly</option>
+              <option value="365" data-i18n="f_daily">Daily</option>
+            </select>
+          </div>
+          <div class="field"><label data-i18n="ci_years_l">Years</label><input type="number" id="ci_years" value="20" min="1" max="80" step="1" /></div>
+          <div class="field"><label data-i18n="ci_inf_l">Expected annual inflation (%) <span class="hint" data-i18n="ci_inf_h">applies if box checked</span></label><input type="number" id="ci_inf" value="3" min="0" max="20" step="0.1" /></div>
+          <label class="toggle-row"><input type="checkbox" id="ci_adjust_inf" /> <span data-i18n="ci_adj_inf_l">Adjust for inflation (show real purchasing power)</span></label>
+          <button class="calc-btn" id="ci_btn" data-i18n="calc">Calculate</button>
+        </div>
+        <div class="result" id="ci_result">
+          <div class="empty" data-i18n="empty_hint">Enter your numbers and press Calculate.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TOOL 2: SAVINGS GOAL -->
+<section class="block" id="tool-goal">
+  <div class="wrap">
+    <div class="card">
+      <div class="tool-head">
+        <svg class="ic" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 19V9l8-5 8 5v10" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 19v-6h6v6" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <div>
+          <h2 data-i18n="t_goal_title">Savings Goal Planner</h2>
+          <p data-i18n="t_goal_desc">How long until you reach a target, like a house deposit or a trip?</p>
+        </div>
+      </div>
+      <div class="grid2">
+        <div>
+          <div class="field"><label data-i18n="sg_target_l">Target amount (USD)</label><input type="number" id="sg_target" value="20000" min="1" step="500" /></div>
+          <div class="field"><label data-i18n="sg_current_l">Already saved (USD)</label><input type="number" id="sg_current" value="2000" min="0" step="100" /></div>
+          <div class="field"><label data-i18n="sg_monthly_l">Monthly contribution (USD)</label><input type="number" id="sg_monthly" value="300" min="0" step="25" /></div>
+          <div class="field"><label data-i18n="sg_rate_l">Annual return rate (%) <span class="hint" data-i18n="sg_rate_h">use 0 if none</span></label><input type="number" id="sg_rate" value="4" min="0" max="30" step="0.1" /></div>
+          <div class="field"><label data-i18n="sg_freq_l">Compounding frequency</label>
+            <select id="sg_freq">
+              <option value="1" data-i18n="f_yearly">Yearly</option>
+              <option value="4" data-i18n="f_quarterly">Quarterly</option>
+              <option value="12" selected data-i18n="f_monthly">Monthly</option>
+              <option value="52" data-i18n="f_weekly">Weekly</option>
+            </select>
+          </div>
+          <button class="calc-btn" id="sg_btn" data-i18n="calc">Calculate</button>
+        </div>
+        <div class="result" id="sg_result">
+          <div class="empty" data-i18n="empty_hint">Enter your numbers and press Calculate.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TOOL 3: PAYCHECK -->
+<section class="block" id="tool-pay">
+  <div class="wrap">
+    <div class="card">
+      <div class="tool-head">
+        <svg class="ic" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="7" width="18" height="12" rx="2" stroke="var(--primary)" stroke-width="2"/><circle cx="12" cy="13" r="2.6" stroke="var(--primary)" stroke-width="2"/><path d="M7 7V5a2 2 0 012-2h6a2 2 0 012 2v2" stroke="var(--primary)" stroke-width="2"/></svg>
+        <div>
+          <h2 data-i18n="t_pay_title">Paycheck Calculator</h2>
+          <p data-i18n="t_pay_desc">Estimate your take-home pay after 401(k), federal &amp; state tax, and FICA.</p>
+        </div>
+      </div>
+      <div class="grid2">
+        <div>
+          <div class="field"><label data-i18n="py_gross_l">Gross pay per period (USD)</label><input type="number" id="py_gross" value="2885" min="0" step="50" /></div>
+          <div class="field"><label data-i18n="py_freq_l">Pay frequency</label>
+            <select id="py_freq">
+              <option value="52" data-i18n="f_weekly">Weekly</option>
+              <option value="26" selected data-i18n="f_biweekly">Bi-Weekly</option>
+              <option value="24" data-i18n="f_semimonthly">Semi-Monthly</option>
+              <option value="12" data-i18n="f_monthly">Monthly</option>
+            </select>
+          </div>
+          <div class="field"><label data-i18n="py_filing_l">Filing status</label>
+            <select id="py_filing">
+              <option value="single" selected data-i18n="fil_single">Single</option>
+              <option value="mfj" data-i18n="fil_mfj">Married Filing Jointly</option>
+              <option value="mfs" data-i18n="fil_mfs">Married Filing Separately</option>
+              <option value="hoh" data-i18n="fil_hoh">Head of Household</option>
+            </select>
+          </div>
+          <div class="field"><label data-i18n="py_401k_l">401(k) contribution (%)</label><input type="number" id="py_401k" value="6" min="0" max="90" step="1" /></div>
+          <div class="field"><label data-i18n="py_state_l">State income tax rate (%) <span class="hint" data-i18n="py_state_h">0 if your state has none</span></label><input type="number" id="py_state" value="5" min="0" max="15" step="0.1" /></div>
+          <div class="field"><label data-i18n="py_health_l">Health insurance (pre-tax, per period, USD)</label><input type="number" id="py_health" value="150" min="0" step="10" /></div>
+          <button class="calc-btn" id="py_btn" data-i18n="calc">Calculate</button>
+        </div>
+        <div class="result" id="py_result">
+          <div class="empty" data-i18n="empty_hint">Enter your numbers and press Calculate.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TOOL 4: INCOME TAX -->
+<section class="block" id="tool-tax">
+  <div class="wrap">
+    <div class="card">
+      <div class="tool-head">
+        <svg class="ic" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 3h12v18l-3-2-3 2-3-2-3 2V3z" stroke="var(--primary)" stroke-width="2" stroke-linejoin="round"/><path d="M9 8h6M9 12h6" stroke="var(--primary)" stroke-width="2" stroke-linecap="round"/></svg>
+        <div>
+          <h2 data-i18n="t_tax_title">Income Tax Calculator</h2>
+          <p data-i18n="t_tax_desc">Estimate your U.S. federal income tax, effective rate, and marginal rate.</p>
+        </div>
+      </div>
+      <div class="grid2">
+        <div>
+          <div class="field"><label data-i18n="tx_income_l">Annual income (USD)</label><input type="number" id="tx_income" value="75000" min="0" step="1000" /></div>
+          <div class="field"><label data-i18n="tx_filing_l">Filing status</label>
+            <select id="tx_filing">
+              <option value="single" selected data-i18n="fil_single">Single</option>
+              <option value="mfj" data-i18n="fil_mfj">Married Filing Jointly</option>
+              <option value="mfs" data-i18n="fil_mfs">Married Filing Separately</option>
+              <option value="hoh" data-i18n="fil_hoh">Head of Household</option>
+            </select>
+          </div>
+          <div class="field"><label data-i18n="tx_ded_l">Deduction</label>
+            <select id="tx_ded">
+              <option value="standard" selected data-i18n="ded_standard">Standard deduction</option>
+              <option value="itemized" data-i18n="ded_itemized">Itemized</option>
+            </select>
+          </div>
+          <div class="field"><label data-i18n="tx_item_l">Itemized amount (USD) <span class="hint" data-i18n="tx_item_h">used only if Itemized selected</span></label><input type="number" id="tx_item" value="15000" min="0" step="500" /></div>
+          <button class="calc-btn" id="tx_btn" data-i18n="calc">Calculate</button>
+        </div>
+        <div class="result" id="tx_result">
+          <div class="empty" data-i18n="empty_hint">Enter your numbers and press Calculate.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TOOL 5: INFLATION -->
+<section class="block" id="tool-infl">
+  <div class="wrap">
+    <div class="card">
+      <div class="tool-head">
+        <svg class="ic" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 20l16-16M8 8h.01M16 16h.01" stroke="var(--primary)" stroke-width="2" stroke-linecap="round"/><path d="M5 14c3-6 11-6 14 0" stroke="var(--primary)" stroke-width="2" stroke-linecap="round"/></svg>
+        <div>
+          <h2 data-i18n="t_infl_title">Inflation Adjuster</h2>
+          <p data-i18n="t_infl_desc">How much will today's money be worth in the future?</p>
+        </div>
+      </div>
+      <div class="grid2">
+        <div>
+          <div class="field"><label data-i18n="in_amount_l">Amount today (USD)</label><input type="number" id="in_amount" value="10000" min="0" step="100" /></div>
+          <div class="field"><label data-i18n="in_years_l">Years from now</label><input type="number" id="in_years" value="15" min="1" max="80" step="1" /></div>
+          <div class="field"><label data-i18n="in_rate_l">Annual inflation rate (%)</label><input type="number" id="in_rate" value="3" min="0" max="30" step="0.1" /></div>
+          <button class="calc-btn" id="in_btn" data-i18n="calc">Calculate</button>
+        </div>
+        <div class="result" id="in_result">
+          <div class="empty" data-i18n="empty_hint">Enter your numbers and press Calculate.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TOOL 6: EMERGENCY FUND -->
+<section class="block" id="tool-ef">
+  <div class="wrap">
+    <div class="card">
+      <div class="tool-head">
+        <svg class="ic" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3l7 3v5c0 4-3 7-7 9-4-2-7-5-7-9V6l7-3z" stroke="var(--primary)" stroke-width="2" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <div>
+          <h2 data-i18n="t_ef_title">Emergency Fund Calculator</h2>
+          <p data-i18n="t_ef_desc">A safety cushion sized to your monthly essential spending.</p>
+        </div>
+      </div>
+      <div class="grid2">
+        <div>
+          <div class="field"><label data-i18n="ef_monthly_l">Monthly essential expenses (USD)</label><input type="number" id="ef_monthly" value="2500" min="0" step="50" /></div>
+          <button class="calc-btn" id="ef_btn" data-i18n="calc">Calculate</button>
+        </div>
+        <div class="result" id="ef_result">
+          <div class="empty" data-i18n="empty_hint">Enter your numbers and press Calculate.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TOOL 7: FIRE -->
+<section class="block" id="tool-fire">
+  <div class="wrap">
+    <div class="card">
+      <div class="tool-head">
+        <svg class="ic" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3c1 3-2 4-2 7a4 4 0 008 0c0-1-.3-2-1-3 2 1 4 3 4 6a7 7 0 11-14 0c0-4 4-6 5-10z" stroke="var(--primary)" stroke-width="2" stroke-linejoin="round"/></svg>
+        <div>
+          <h2 data-i18n="t_fire_title">FIRE Calculator</h2>
+          <p data-i18n="t_fire_desc">Financial Independence, Retire Early — when can your investments cover your life?</p>
+        </div>
+      </div>
+      <div class="grid2">
+        <div>
+          <div class="field"><label data-i18n="fr_age_l">Current age</label><input type="number" id="fr_age" value="30" min="16" max="80" step="1" /></div>
+          <div class="field"><label data-i18n="fr_savings_l">Current invested savings (USD)</label><input type="number" id="fr_savings" value="15000" min="0" step="500" /></div>
+          <div class="field"><label data-i18n="fr_spend_l">Annual spending in retirement (USD)</label><input type="number" id="fr_spend" value="40000" min="0" step="1000" /></div>
+          <div class="field"><label data-i18n="fr_annual_l">Annual contribution (USD)</label><input type="number" id="fr_annual" value="12000" min="0" step="500" /></div>
+          <div class="field"><label data-i18n="fr_return_l">Expected annual return (%)</label><input type="number" id="fr_return" value="7" min="0" max="20" step="0.1" /></div>
+          <div class="field"><label data-i18n="fr_swr_l">Safe withdrawal rate (%) <span class="hint" data-i18n="fr_swr_h">often 4%</span></label><input type="number" id="fr_swr" value="4" min="1" max="10" step="0.1" /></div>
+          <div class="field"><label data-i18n="fr_inf_l">Expected annual inflation (%) <span class="hint" data-i18n="fr_inf_h">for inflation-adjusted FIRE number</span></label><input type="number" id="fr_inf" value="3" min="0" max="20" step="0.1" /></div>
+          <label class="toggle-row"><input type="checkbox" id="fr_adjust_inf" /> <span data-i18n="fr_adj_inf_l">Adjust FIRE number for inflation</span></label>
+          <button class="calc-btn" id="fire_btn" data-i18n="calc">Calculate</button>
+        </div>
+        <div class="result" id="fire_result">
+          <div class="empty" data-i18n="empty_hint">Enter your numbers and press Calculate.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TOOL 8: NET WORTH & GOALS -->
+<section class="block" id="tool-nw">
+  <div class="wrap">
+    <div class="card">
+      <div class="tool-head">
+        <svg class="ic" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="9" cy="8" r="3.2" stroke="var(--primary)" stroke-width="2"/><path d="M3.5 20c0-3 2.5-5 5.5-5s5.5 2 5.5 5" stroke="var(--primary)" stroke-width="2" stroke-linecap="round"/><circle cx="17" cy="9" r="2.4" stroke="var(--primary)" stroke-width="2"/><path d="M14.5 19.5c.4-2.4 2.2-4 4-4s3.2 1.6 3.5 4" stroke="var(--primary)" stroke-width="2" stroke-linecap="round"/></svg>
+        <div>
+          <h2 data-i18n="t_nw_title">Net Worth &amp; Goals</h2>
+          <p data-i18n="t_nw_desc">See where you stand for your age and what it takes to hit your target.</p>
+        </div>
+      </div>
+      <div class="grid2">
+        <div>
+          <div class="field"><label data-i18n="nw_age_l">Current age</label><input type="number" id="nw_age" value="30" min="16" max="90" step="1" /></div>
+          <div class="field"><label data-i18n="nw_current_l">Current net worth (USD)</label><input type="number" id="nw_current" value="25000" min="0" step="1000" /></div>
+          <div class="field"><label data-i18n="nw_annual_l">Annual savings (USD)</label><input type="number" id="nw_annual" value="8000" min="0" step="500" /></div>
+          <div class="field"><label data-i18n="nw_return_l">Expected annual return (%)</label><input type="number" id="nw_return" value="6" min="0" max="20" step="0.1" /></div>
+          <div class="field"><label data-i18n="nw_target_l">Target net worth (USD, optional)</label><input type="number" id="nw_target" value="500000" min="0" step="10000" /></div>
+          <div class="field"><label data-i18n="nw_years_l">Years to reach target</label><input type="number" id="nw_years" value="20" min="1" max="80" step="1" /></div>
+          <button class="calc-btn" id="nw_btn" data-i18n="calc">Calculate</button>
+        </div>
+        <div class="result" id="nw_result">
+          <div class="empty" data-i18n="empty_hint">Enter your numbers and press Calculate.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TOOL 9: AMORTIZATION -->
+<section class="block" id="tool-amort">
+  <div class="wrap">
+    <div class="card">
+      <div class="tool-head">
+        <svg class="ic" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 17l5-5 4 3 8-8" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M16 7h4v4" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <div>
+          <h2 data-i18n="t_amort_title">Amortization Calculator</h2>
+          <p data-i18n="t_amort_desc">See your payment, total interest, and a full amortization schedule.</p>
+        </div>
+      </div>
+      <div class="grid2">
+        <div>
+          <div class="field"><label data-i18n="am_amount_l">Loan amount (USD)</label><input type="number" id="am_amount" value="250000" min="0" step="1000" /></div>
+          <div class="field"><label data-i18n="am_rate_l">Annual interest rate (%)</label><input type="number" id="am_rate" value="6.5" min="0" max="30" step="0.1" /></div>
+          <div class="field"><label data-i18n="am_years_l">Loan term (years)</label><input type="number" id="am_years" value="30" min="1" max="40" step="1" /></div>
+          <div class="field"><label data-i18n="am_extra_l">Extra monthly payment (USD) <span class="hint" data-i18n="am_extra_h">optional — saves interest</span></label><input type="number" id="am_extra" value="0" min="0" step="50" /></div>
+          <button class="calc-btn" id="am_btn" data-i18n="calc">Calculate</button>
+        </div>
+        <div class="result" id="am_result">
+          <div class="empty" data-i18n="empty_hint">Enter your numbers and press Calculate.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TOOL 10: LOAN (auto) -->
+<section class="block" id="tool-loan">
+  <div class="wrap">
+    <div class="card">
+      <div class="tool-head">
+        <svg class="ic" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 11l1.5-4h11L19 11M5 11h14v5H5z" stroke="var(--primary)" stroke-width="2" stroke-linejoin="round"/><circle cx="8" cy="17" r="1.6" stroke="var(--primary)" stroke-width="2"/><circle cx="16" cy="17" r="1.6" stroke="var(--primary)" stroke-width="2"/></svg>
+        <div>
+          <h2 data-i18n="t_loan_title">Loan Calculator</h2>
+          <p data-i18n="t_loan_desc">Estimate your auto or personal loan payment from price, down payment, and trade-in.</p>
+        </div>
+      </div>
+      <div class="grid2">
+        <div>
+          <div class="field"><label data-i18n="ln_price_l">Vehicle / item price (USD)</label><input type="number" id="ln_price" value="32000" min="0" step="500" /></div>
+          <div class="field"><label data-i18n="ln_down_l">Down payment (USD)</label><input type="number" id="ln_down" value="5000" min="0" step="500" /></div>
+          <div class="field"><label data-i18n="ln_trade_l">Trade-in value (USD)</label><input type="number" id="ln_trade" value="0" min="0" step="500" /></div>
+          <div class="field"><label data-i18n="ln_rate_l">Annual interest rate / APR (%)</label><input type="number" id="ln_rate" value="7.5" min="0" max="30" step="0.1" /></div>
+          <div class="field"><label data-i18n="ln_term_l">Loan term (months)</label>
+            <select id="ln_term">
+              <option value="24">24 (2 yr)</option>
+              <option value="36">36 (3 yr)</option>
+              <option value="48">48 (4 yr)</option>
+              <option value="60" selected>60 (5 yr)</option>
+              <option value="72">72 (6 yr)</option>
+              <option value="84">84 (7 yr)</option>
+            </select>
+          </div>
+          <button class="calc-btn" id="ln_btn" data-i18n="calc">Calculate</button>
+        </div>
+        <div class="result" id="ln_result">
+          <div class="empty" data-i18n="empty_hint">Enter your numbers and press Calculate.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</div><!-- /tools-shell -->
+
+<!-- FAQ -->
+<section class="block" id="faq">
+  <div class="wrap">
+    <h2 data-i18n="faq_title" style="margin:0 0 6px;font-size:24px">Frequently asked questions</h2>
+    <details class="faq" open><summary data-i18n="faq_q1">How does compound interest work?</summary><div class="ans" data-i18n="faq_a1">Compound interest means you earn returns not only on your original money but also on the returns it has already earned. The more frequently interest compounds and the longer you wait, the faster your balance grows.</div></details>
+    <details class="faq"><summary data-i18n="faq_q2">How is my take-home pay calculated?</summary><div class="ans" data-i18n="faq_a2">Start with gross pay, subtract pre-tax 401(k) and health premiums, then withhold federal income tax using marginal brackets, state income tax, and FICA (Social Security 6.2% plus Medicare 1.45%, with an extra 0.9% above $200,000). What remains is your net pay.</div></details>
+    <details class="faq"><summary data-i18n="faq_q3">How big should my emergency fund be?</summary><div class="ans" data-i18n="faq_a3">A common rule is three to six months of essential expenses. If your income is unstable or you have dependents, aim for six to nine months.</div></details>
+    <details class="faq"><summary data-i18n="faq_q4">What is a FIRE number?</summary><div class="ans" data-i18n="faq_a4">Your FIRE number is the invested portfolio size that lets you cover living expenses from returns. A common estimate divides annual spending by a safe withdrawal rate, often 4%, so the target is about 25 times your yearly spending.</div></details>
+    <details class="faq"><summary data-i18n="faq_q5">Is my data uploaded or stored?</summary><div class="ans" data-i18n="faq_a5">No. All calculations run locally in your browser. Pennora does not collect, upload, or sell any financial information you enter.</div></details>
+    <details class="faq"><summary data-i18n="faq_q6">Why show inflation-adjusted values?</summary><div class="ans" data-i18n="faq_a6">A dollar today will not buy the same in 20 years. Our compound and FIRE calculators can show results in today's purchasing power so you see what your money is really worth, not just the nominal number.</div></details>
+  </div>
+</section>
+
+<!-- AFFILIATE -->
+<section class="block" id="books">
+  <div class="wrap">
+    <h2 data-i18n="books_title" style="margin:0 0 6px;font-size:24px">Recommended reading</h2>
+    <p data-i18n="books_sub" style="color:var(--muted);margin:0 0 6px">A few widely-read personal finance books. As an Amazon Associate we may earn from qualifying purchases.</p>
+    <div class="books" id="bookList"></div>
+    <p class="disclaimer" data-i18n="books_disclaimer">Pennora is a participant in the Amazon Associates Program, an affiliate advertising program. Links are sponsored; we may receive a commission at no extra cost to you. This does not affect our editorial independence. Always do your own research before making financial decisions.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <div class="logo" style="margin-bottom:10px">
+          <svg class="mark" viewBox="0 0 32 32" fill="none" aria-hidden="true"><circle cx="16" cy="16" r="14" fill="var(--primary)"/><path d="M16 9v14M11 13.5c0-2 2.2-3.5 5-3.5s5 1.5 5 3.5-2.2 3-5 3-5 1.5-5 3.5 2.2 3.5 5 3.5" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
+          <span>Pennora</span>
+        </div>
+        <p data-i18n="foot_about" style="margin:0;max-width:42ch">Free, private, bilingual calculators for net worth, paycheck, income tax, saving, inflation, and early retirement. Built for people who want clarity without the jargon.</p>
+      </div>
+      <div>
+        <h4 data-i18n="foot_tools">Tools</h4>
+        <ul>
+          <li><a href="tools/compound-interest-calculator.html" data-i18n="t_compound_title">Compound Interest</a></li>
+          <li><a href="tools/savings-goal-planner.html" data-i18n="t_goal_title">Savings Goal</a></li>
+          <li><a href="tools/paycheck-calculator.html" data-i18n="t_pay_title">Paycheck</a></li>
+          <li><a href="tools/income-tax-calculator.html" data-i18n="t_tax_title">Income Tax</a></li>
+          <li><a href="tools/inflation-adjuster.html" data-i18n="t_infl_title">Inflation</a></li>
+          <li><a href="tools/emergency-fund-calculator.html" data-i18n="t_ef_title">Emergency Fund</a></li>
+          <li><a href="tools/fire-calculator.html" data-i18n="t_fire_title">FIRE</a></li>
+          <li><a href="tools/net-worth-calculator.html" data-i18n="t_nw_title">Net Worth</a></li>
+          <li><a href="tools/amortization-calculator.html" data-i18n="t_amort_title">Amortization</a></li>
+          <li><a href="tools/loan-calculator.html" data-i18n="t_loan_title">Loan</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-i18n="foot_more">More</h4>
+        <ul>
+          <li><a href="privacy.html" data-i18n="foot_privacy">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="foot-note" id="footNote"></p>
+    <p class="foot-updated" id="footUpdated"></p>
+  </div>
+</footer>
+
+<script>
+"use strict";
+/* ============================ i18n ============================ */
+var I18N = {
+  en: {
+    theme:"Theme", langLabel:"中文 / EN",
+    badge1:"✓ Free & private", badge2:"✓ No sign-up", badge3:"✓ English / 中文",
+    heroTitle:"Money tools that actually make sense.",
+    heroSub:"Eight clear calculators for net worth, paycheck, income tax, saving, inflation, and early retirement. Everything runs in your browser — nothing is uploaded, ever.",
+    empty_hint:"Enter your numbers and press Calculate.",
+    calc:"Calculate",
+    f_yearly:"Yearly", f_quarterly:"Quarterly", f_monthly:"Monthly", f_weekly:"Weekly", f_daily:"Daily", f_biweekly:"Bi-Weekly", f_semimonthly:"Semi-Monthly",
+    fil_single:"Single", fil_mfj:"Married Filing Jointly", fil_mfs:"Married Filing Separately", fil_hoh:"Head of Household",
+    t_compound_title:"Compound Interest Calculator", t_compound_desc:"See how a starting amount plus regular contributions grows over time.",
+    ci_principal_l:"Starting amount (USD)", ci_monthly_l:"Monthly contribution (USD)", ci_rate_l:"Annual return rate (%)", ci_freq_l:"Compounding frequency", ci_years_l:"Years",
+    ci_out_balance:"Future balance", ci_out_contrib:"Total contributed", ci_out_interest:"Total interest", ci_out_invested:"Money you put in", ci_out_growth:"Money your money earned",
+    ci_note:"Contributions are added each compounding period. Results are estimates and exclude taxes and fees.",
+    t_goal_title:"Savings Goal Planner", t_goal_desc:"How long until you reach a target, like a house deposit or a trip?",
+    sg_target_l:"Target amount (USD)", sg_current_l:"Already saved (USD)", sg_monthly_l:"Monthly contribution (USD)", sg_rate_l:"Annual return rate (%)", sg_rate_h:"use 0 if none", sg_freq_l:"Compounding frequency",
+    sg_out_time:"Time to reach goal", sg_out_contrib:"Total contributed", sg_out_interest:"Interest earned", sg_out_final:"Final balance",
+    sg_note:"Assuming contributions are added each compounding period and returns stay constant.", sg_unreach:"With these inputs the goal is not reachable in 100 years. Try a higher monthly contribution or return rate.",
+    t_pay_title:"Paycheck Calculator", t_pay_desc:"Estimate your take-home pay after 401(k), federal & state tax, and FICA.",
+    py_gross_l:"Gross pay per period (USD)", py_freq_l:"Pay frequency", py_filing_l:"Filing status",
+    py_401k_l:"401(k) contribution (%)", py_state_l:"State income tax rate (%)", py_state_h:"0 if your state has none", py_health_l:"Health insurance (pre-tax, per period, USD)",
+    py_out_net:"Net pay per period", py_out_net_year:"Net pay per year", py_out_fed:"Federal tax / yr", py_out_state:"State tax / yr", py_out_fica:"FICA / yr", py_out_401k:"401(k) / yr", py_out_total:"Total deductions / yr",
+    py_note:"Estimates only: 2024 IRS brackets, standard deduction, Social Security wage base $168,600, Medicare 1.45% (+0.9% above $200,000). Nine states have no income tax — enter 0. Not financial advice.",
+    t_tax_title:"Income Tax Calculator", t_tax_desc:"Estimate your U.S. federal income tax, effective rate, and marginal rate.",
+    tx_income_l:"Annual income (USD)", tx_filing_l:"Filing status", tx_ded_l:"Deduction", tx_item_l:"Itemized amount (USD)", tx_item_h:"used only if Itemized selected",
+    ded_standard:"Standard deduction", ded_itemized:"Itemized",
+    tx_out_tax:"Estimated federal tax", tx_out_eff:"Effective tax rate", tx_out_marg:"Marginal tax rate", tx_out_taxable:"Taxable income", tx_out_after:"After-tax income",
+    tx_note:"Uses 2024 IRS federal brackets and standard deductions. State taxes are not included. Estimates only — not financial advice.",
+    t_infl_title:"Inflation Adjuster", t_infl_desc:"How much will today's money be worth in the future?",
+    in_amount_l:"Amount today (USD)", in_years_l:"Years from now", in_rate_l:"Annual inflation rate (%)",
+    in_out_future:"Future nominal amount", in_out_real:"Today's purchasing power", in_out_loss:"Lost purchasing power",
+    in_note:"Inflation reduces purchasing power over time. The 'future nominal amount' is what you would need later to match today's value.",
+    t_ef_title:"Emergency Fund Calculator", t_ef_desc:"A safety cushion sized to your monthly essential spending.",
+    ef_monthly_l:"Monthly essential expenses (USD)",
+    ef_tier_min:"Minimum (3 months)", ef_tier_std:"Standard (6 months)", ef_tier_safe:"Safety net (9 months)",
+    ef_note:"Base this on essential expenses only — housing, food, utilities, insurance, minimum debt payments — not discretionary spending.",
+    t_fire_title:"FIRE Calculator", t_fire_desc:"Financial Independence, Retire Early — when can your investments cover your life?",
+    fr_age_l:"Current age", fr_savings_l:"Current invested savings (USD)", fr_spend_l:"Annual spending in retirement (USD)", fr_annual_l:"Annual contribution (USD)", fr_return_l:"Expected annual return (%)", fr_swr_l:"Safe withdrawal rate (%)", fr_swr_h:"often 4%",
+    fire_out_target:"Your FIRE number", fire_out_age:"Age you reach FIRE", fire_out_years:"Years to go", fire_out_saved:"Total you will have invested",
+    fire_note:"Target = annual spending ÷ withdrawal rate (about 25× spending at 4%). Estimates ignore taxes, fees, and market volatility.",
+    fire_unreach:"With these inputs you would not reach the target by age 100. Try a higher contribution, return, or lower spending.",
+    ci_adj_inf_l:"Adjust for inflation (show real purchasing power)",
+    ci_inf_l:"Expected annual inflation (%)", ci_inf_h:"applies if box checked",
+    ci_out_real:"Real value (today's dollars)",
+    ci_real_note:"Real value strips out inflation so you see what the balance is actually worth in today's purchasing power.",
+    fr_adj_inf_l:"Adjust FIRE number for inflation",
+    fr_inf_l:"Expected annual inflation (%)", fr_inf_h:"for inflation-adjusted FIRE number",
+    fire_out_target_adj:"Inflation-adjusted FIRE number",
+    fire_adj_note:"Inflation raises future spending. Your inflation-adjusted FIRE number is the today's-dollars target grown to your retirement year.",
+    t_nw_title:"Net Worth & Goals", t_nw_desc:"See where you stand for your age and what it takes to hit your target.",
+    nw_age_l:"Current age", nw_current_l:"Current net worth (USD)", nw_annual_l:"Annual savings (USD)", nw_return_l:"Expected annual return (%)", nw_target_l:"Target net worth (USD, optional)", nw_years_l:"Years to reach target",
+    nw_out_median:"Median for your age (US)", nw_out_standing:"Your standing", nw_out_proj:"Projected net worth", nw_out_gap:"Gap to target", nw_out_req:"Extra to save per year", nw_out_reqmo:"Extra per month", nw_out_target:"Target net worth",
+    nw_on_track:"On track — you're projected to exceed your target by {x}.",
+    nw_gap_msg:"To reach your target in {y} years, save about {a} more per year ({m} per month) beyond your current plan.",
+    nw_bench_title:"Approximate U.S. median net worth by age",
+    nw_bench_age:"Age", nw_bench_med:"Median net worth",
+    nw_bench_note:"Benchmarks are approximate U.S. Federal Reserve Survey of Consumer Finances (2022) medians. The percentile is a simplified log-normal estimate for illustration only — not an official statistic. Not financial advice.",
+    faq_q6:"Why show inflation-adjusted values?", faq_a6:"A dollar today will not buy the same in 20 years. Our compound and FIRE calculators can show results in today's purchasing power so you see what your money is really worth, not just the nominal number.",
+    faq_title:"Frequently asked questions",
+    faq_q1:"How does compound interest work?", faq_a1:"Compound interest means you earn returns not only on your original money but also on the returns it has already earned. The more frequently interest compounds and the longer you wait, the faster your balance grows.",
+    faq_q2:"How is my take-home pay calculated?", faq_a2:"Start with gross pay, subtract pre-tax 401(k) and health premiums, then withhold federal income tax using marginal brackets, state income tax, and FICA (Social Security 6.2% plus Medicare 1.45%, with an extra 0.9% above $200,000). What remains is your net pay.",
+    faq_q3:"How big should my emergency fund be?", faq_a3:"A common rule is three to six months of essential expenses. If your income is unstable or you have dependents, aim for six to nine months.",
+    faq_q4:"What is a FIRE number?", faq_a4:"Your FIRE number is the invested portfolio size that lets you cover living expenses from returns. A common estimate divides annual spending by a safe withdrawal rate, often 4%, so the target is about 25 times your yearly spending.",
+    faq_q5:"Is my data uploaded or stored?", faq_a5:"No. All calculations run locally in your browser. Pennora does not collect, upload, or sell any financial information you enter.",
+    books_title:"Recommended reading", books_sub:"A few widely-read personal finance books. As an Amazon Associate, Pennora earns from qualifying purchases.",
+    books_disclaimer:"Pennora is a participant in the Amazon Associates Program, an affiliate advertising program. Links are sponsored; we may receive a commission at no extra cost to you. This does not affect our editorial independence. Always do your own research before making financial decisions.",
+    foot_about:"Free, private, bilingual calculators for loans, amortization, net worth, paycheck, income tax, saving, inflation, and early retirement. Built for people who want clarity without the jargon.",
+    foot_tools:"Tools", foot_more:"More", foot_privacy:"Privacy Policy",
+    foot_note:"Pennora provides educational calculators only and is not financial advice. Figures are estimates based on the inputs you provide and do not account for taxes, fees, or market risk. Consult a qualified professional before making financial decisions. © {year} Pennora.",
+    foot_updated:"Last updated: July 2026",
+    books:[
+      {t:"The Psychology of Money", a:"Morgan Housel", q:"1636108338"},
+      {t:"I Will Teach You to Be Rich", a:"Ramit Sethi", q:"0345526529"},
+      {t:"Your Money or Your Life", a:"Vicki Robin", q:"0143115766"},
+      {t:"The Simple Path to Wealth", a:"JL Collins", q:"1533667926"}
+    ],
+    t_amort_title:"Amortization Calculator", t_amort_desc:"See your payment, total interest, and a full amortization schedule.",
+    am_amount_l:"Loan amount (USD)", am_rate_l:"Annual interest rate (%)", am_years_l:"Loan term (years)",
+    am_extra_l:"Extra monthly payment (USD)", am_extra_h:"optional — saves interest",
+    am_out_payment:"Monthly payment", am_out_total:"Total of payments", am_out_interest:"Total interest", am_out_payoff:"Payoff time",
+    am_out_saved:"Interest saved (with extra)", am_out_balance:"Remaining balance",
+    am_t_year:"Year", am_t_begin:"Beginning balance", am_t_int:"Interest", am_t_princ:"Principal", am_t_end:"Ending balance",
+    am_note:"Uses the standard fixed-rate amortization formula. Extra payments shorten the loan and cut total interest. Estimates only — not financial advice.",
+    t_loan_title:"Loan Calculator", t_loan_desc:"Estimate your auto or personal loan payment from price, down payment, and trade-in.",
+    ln_price_l:"Vehicle / item price (USD)", ln_down_l:"Down payment (USD)", ln_trade_l:"Trade-in value (USD)",
+    ln_rate_l:"Annual interest rate / APR (%)", ln_term_l:"Loan term (months)",
+    ln_out_payment:"Monthly payment", ln_out_financed:"Amount financed", ln_out_interest:"Total interest", ln_out_total:"Total of payments", ln_out_balance:"Loan balance",
+    ln_zero:"Enter a price higher than your down payment and trade-in.",
+    ln_note:"Assumes a fixed-rate loan fully amortized over the term. Excludes taxes, fees, and insurance. Estimates only — not financial advice."
+  },
+  zh: {
+    theme:"主题", langLabel:"中文 / EN",
+    badge1:"✓ 免费且私密", badge2:"✓ 无需注册", badge3:"✓ 中文 / English",
+    heroTitle:"把钱算得明明白白。",
+    heroSub:"十款简洁的计算器，覆盖贷款、摊销、净资产、工资、所得税、储蓄、通胀与提前退休。全部在浏览器本地运行——数据绝不上传。",
+    empty_hint:"输入数字后点击「计算」。",
+    calc:"计算",
+    f_yearly:"每年", f_quarterly:"每季度", f_monthly:"每月", f_weekly:"每周", f_daily:"每日", f_biweekly:"双周", f_semimonthly:"半月",
+    fil_single:"单身", fil_mfj:"已婚联合申报", fil_mfs:"已婚分别申报", fil_hoh:"户主",
+    t_compound_title:"复利计算器", t_compound_desc:"看看一笔本金加上定期投入，会如何随时间增长。",
+    ci_principal_l:"起始金额（美元）", ci_monthly_l:"每月定投（美元）", ci_rate_l:"年化收益率（%）", ci_freq_l:"复利频率", ci_years_l:"年数",
+    ci_out_balance:"未来总额", ci_out_contrib:"累计投入", ci_out_interest:"累计利息", ci_out_invested:"你投入的钱", ci_out_growth:"钱生出来的钱",
+    ci_note:"定投在每个复利周期计入。结果为估算，未计入税费。",
+    t_goal_title:"储蓄目标规划器", t_goal_desc:"攒到某个目标（如买房首付、一次旅行）需要多久？",
+    sg_target_l:"目标金额（美元）", sg_current_l:"已攒金额（美元）", sg_monthly_l:"每月定投（美元）", sg_rate_l:"年化收益率（%）", sg_rate_h:"无收益填 0", sg_freq_l:"复利频率",
+    sg_out_time:"达成目标所需时间", sg_out_contrib:"累计投入", sg_out_interest:"利息收益", sg_out_final:"最终余额",
+    sg_note:"假设定投在每个复利周期计入，且收益率保持不变。", sg_unreach:"按当前输入，100 年内无法达成目标。请提高每月定投或收益率。",
+    t_pay_title:"工资计算器", t_pay_desc:"估算扣除 401(k)、联邦与州税、以及 FICA 后的到手工资。",
+    py_gross_l:"每期税前工资（美元）", py_freq_l:"发放频率", py_filing_l:"报税身份",
+    py_401k_l:"401(k) 缴纳比例（%）", py_state_l:"州所得税率（%）", py_state_h:"所在州若无州税填 0", py_health_l:"健康保险（税前，每期，美元）",
+    py_out_net:"每期到手工资", py_out_net_year:"每年到手工资", py_out_fed:"联邦税 / 年", py_out_state:"州税 / 年", py_out_fica:"FICA / 年", py_out_401k:"401(k) / 年", py_out_total:"每年总扣除",
+    py_note:"仅为估算：采用 2024 年 IRS 税率表、标准扣除、社安税基数 $168,600、医疗税 1.45%（超过 $200,000 加收 0.9%）。有 9 个州无州所得税——填 0 即可。不构成财务建议。",
+    t_tax_title:"所得税计算器", t_tax_desc:"估算美国联邦所得税、有效税率与边际税率。",
+    tx_income_l:"年收入（美元）", tx_filing_l:"报税身份", tx_ded_l:"扣除方式", tx_item_l:"逐项扣除金额（美元）", tx_item_h:"仅在选择「逐项扣除」时生效",
+    ded_standard:"标准扣除", ded_itemized:"逐项扣除",
+    tx_out_tax:"预计联邦所得税", tx_out_eff:"有效税率", tx_out_marg:"边际税率", tx_out_taxable:"应税收入", tx_out_after:"税后收入",
+    tx_note:"采用 2024 年 IRS 联邦税率表与标准扣除，未含州税。仅为估算，不构成财务建议。",
+    t_infl_title:"通胀调整计算器", t_infl_desc:"今天的钱，将来还值多少？",
+    in_amount_l:"今天金额（美元）", in_years_l:"多少年后", in_rate_l:"年通胀率（%）",
+    in_out_future:"未来名义金额", in_out_real:"今天的购买力", in_out_loss:"损失的购买力",
+    in_note:"通胀会随着时间侵蚀购买力。「未来名义金额」是未来为匹配今天价值所需的数额。",
+    t_ef_title:"应急基金计算器", t_ef_desc:"一笔与你每月必要开支相匹配的安全垫。",
+    ef_monthly_l:"每月必要开支（美元）",
+    ef_tier_min:"最低（3 个月）", ef_tier_std:"标准（6 个月）", ef_tier_safe:"安全网（9 个月）",
+    ef_note:"只计算必要开支——房租、食物、水电、保险、最低债务还款——不含非必要消费。",
+    t_fire_title:"FIRE 计算器", t_fire_desc:"财务自由、提前退休——你的投资何时能覆盖生活？",
+    fr_age_l:"当前年龄", fr_savings_l:"当前投资储蓄（美元）", fr_spend_l:"退休后年支出（美元）", fr_annual_l:"每年投入（美元）", fr_return_l:"预期年化收益（%）", fr_swr_l:"安全提取率（%）", fr_swr_h:"常用 4%",
+    fire_out_target:"你的 FIRE 数字", fire_out_age:"实现财务自由的年龄", fire_out_years:"还需年数", fire_out_saved:"累计投入本金",
+    fire_note:"目标 = 年支出 ÷ 提取率（4% 时约为年支出的 25 倍）。估算未计入税费与市场波动。",
+    fire_unreach:"按当前输入，100 岁前无法达成目标。请提高投入、收益或降低支出。",
+    ci_adj_inf_l:"按通胀调整（显示真实购买力）",
+    ci_inf_l:"预期年通胀率（%）", ci_inf_h:"勾选后生效",
+    ci_out_real:"真实价值（以今天美元计）",
+    ci_real_note:"真实价值剔除了通胀，让你看到这笔钱在今天的购买力下实际值多少。",
+    fr_adj_inf_l:"按通胀调整 FIRE 数字",
+    fr_inf_l:"预期年通胀率（%）", fr_inf_h:"用于通胀调整后的 FIRE 数字",
+    fire_out_target_adj:"通胀调整后的 FIRE 数字",
+    fire_adj_note:"通胀会抬高未来的开支。你的通胀调整后 FIRE 数字，是把今天的美元目标增长到退休年份所需的金额。",
+    t_nw_title:"净资产与目标", t_nw_desc:"看看你在同龄人中的位置，以及达成目标需要什么。",
+    nw_age_l:"当前年龄", nw_current_l:"当前净资产（美元）", nw_annual_l:"每年储蓄（美元）", nw_return_l:"预期年化收益（%）", nw_target_l:"目标净资产（美元，可选）", nw_years_l:"达成目标所需年数",
+    nw_out_median:"同龄中位数（美国）", nw_out_standing:"你的位置", nw_out_proj:"预计净资产", nw_out_gap:"距目标缺口", nw_out_req:"每年需多存", nw_out_reqmo:"每月需多存", nw_out_target:"目标净资产",
+    nw_on_track:"进度达标——预计将超出目标 {x}。",
+    nw_gap_msg:"要在 {y} 年内达成目标，除当前计划外，每年约需多存 {a}（每月 {m}）。",
+    nw_bench_title:"美国各年龄段近似净资产中位数",
+    nw_bench_age:"年龄段", nw_bench_med:"净资产中位数",
+    nw_bench_note:"基准为美国联邦储备委员会《消费者财务调查》（2022）近似中位数。百分位为简化的对数正态估算，仅供参考，并非官方统计。不构成财务建议。",
+    faq_q6:"为什么要显示通胀调整后的值？", faq_a6:"今天的 1 美元在 20 年后买不到同样的东西。我们的复利与 FIRE 计算器可以显示以今天购买力衡量的结果，让你看到钱的真正价值，而不只是名义数字。",
+    faq_title:"常见问题",
+    faq_q1:"复利是怎么运作的？", faq_a1:"复利意味着你不仅对本钱赚取收益，也对已产生的收益再赚收益。复利越频繁、时间越长，余额增长越快。",
+    faq_q2:"我的到手工资是怎么算出来的？", faq_a2:"从税前工资出发，先扣除税前 401(k) 与健康险，再按累进税率预扣联邦所得税、州所得税，以及 FICA（社安税 6.2% + 医疗税 1.45%，超过 $200,000 部分再加 0.9%）。剩下的就是你的净到手工资。",
+    faq_q3:"应急基金应该留多少？", faq_a3:"常见规则是必要开支的 3 到 6 个月。如果收入不稳定或有赡养对象，建议留 6 到 9 个月。",
+    faq_q4:"什么是 FIRE 数字？", faq_a4:"FIRE 数字是让你靠投资收益覆盖生活开支所需的投资组合规模。常见估算是年支出除以安全提取率（常用 4%），即约为年支出的 25 倍。",
+    faq_q5:"我的数据会被上传或存储吗？", faq_a5:"不会。所有计算都在你的浏览器本地完成。Pennora 不会收集、上传或出售你输入的任何财务信息。",
+    books_title:"推荐书单", books_sub:"几本广受好评的个人理财书籍。作为 Amazon 联盟成员，Pennora 可能从符合条件的购买中获得收益。",
+    books_disclaimer:"Pennora 是亚马逊联盟计划（Amazon Associates）的参与者。链接为赞助性质；你无需额外付费，我们可能获得佣金。这不影响我们的编辑独立性。做任何财务决定前请自行研究。",
+    foot_about:"免费、私密、双语的个人理财计算器，覆盖贷款、摊销、净资产、工资、所得税、储蓄、通胀与提前退休。为想要清晰、拒绝术语的人而建。",
+    foot_tools:"工具", foot_more:"更多", foot_privacy:"隐私政策",
+    foot_note:"Pennora 仅提供教育性计算器，不构成财务建议。数字为基于你输入的估算，未考虑税费、费用或市场风险。做任何财务决定前请咨询合格专业人士。© {year} Pennora。",
+    foot_updated:"最后更新：2026 年 7 月",
+    books:[
+      {t:"金钱心理学", a:"Morgan Housel", q:"1636108338"},
+      {t:"I Will Teach You to Be Rich", a:"Ramit Sethi", q:"0345526529"},
+      {t:"Your Money or Your Life", a:"Vicki Robin", q:"0143115766"},
+      {t:"The Simple Path to Wealth", a:"JL Collins", q:"1533667926"}
+    ],
+    t_amort_title:"摊销计算器", t_amort_desc:"查看你的每期还款、总利息与完整还款计划表。",
+    am_amount_l:"贷款金额（美元）", am_rate_l:"年化利率（%）", am_years_l:"贷款年限",
+    am_extra_l:"每月额外还款（美元）", am_extra_h:"可选——可省利息",
+    am_out_payment:"每月还款", am_out_total:"还款总额", am_out_interest:"总利息", am_out_payoff:"还清时间",
+    am_out_saved:"额外还款省下的利息", am_out_balance:"剩余本金",
+    am_t_year:"年份", am_t_begin:"期初余额", am_t_int:"利息", am_t_princ:"本金", am_t_end:"期末余额",
+    am_note:"采用标准固定利率摊销公式。额外还款会缩短贷款期限并减少总利息。仅为估算，不构成财务建议。",
+    t_loan_title:"贷款计算器", t_loan_desc:"根据价格、首付与置换价值，估算车贷或个人贷款月供。",
+    ln_price_l:"车辆 / 物品价格（美元）", ln_down_l:"首付（美元）", ln_trade_l:"置换价值（美元）",
+    ln_rate_l:"年化利率 / APR（%）", ln_term_l:"贷款期限（月）",
+    ln_out_payment:"每月还款", ln_out_financed:"贷款本金", ln_out_interest:"总利息", ln_out_total:"还款总额", ln_out_balance:"贷款余额",
+    ln_zero:"请输入高于首付与置换价值之和的价格。",
+    ln_note:"假设为按期限完全摊销的固定利率贷款，未含税费与保险。仅为估算，不构成财务建议。"
+  }
+};
+
+/* ============================ state ============================ */
+var currentLang = "en";
+var currentTheme = "light";
+function getEl(id){ return document.getElementById(id); }
+function num(id){ var v = parseFloat(getEl(id).value); return isNaN(v) ? 0 : v; }
+
+/* ============================ formatting ============================ */
+function fmtMoney(v){
+  return new Intl.NumberFormat(currentLang==="zh" ? "zh-CN" : "en-US",
+    {style:"currency", currency:"USD", maximumFractionDigits:0}).format(v || 0);
+}
+function fmtMoney2(v){
+  return new Intl.NumberFormat(currentLang==="zh" ? "zh-CN" : "en-US",
+    {style:"currency", currency:"USD", maximumFractionDigits:2}).format(v || 0);
+}
+function fmtPct(v){ return (v).toFixed(1) + "%"; }
+function fmtShort(v){
+  var neg = v < 0; v = Math.abs(v);
+  var s;
+  if (v >= 1e6) s = "$" + (v/1e6).toFixed(v>=1e7?0:1) + "M";
+  else if (v >= 1e3) s = "$" + (v/1e3).toFixed(v>=1e4?0:1) + "k";
+  else s = "$" + Math.round(v);
+  return neg ? "-"+s : s;
+}
+
+/* ============================ US TAX MODEL (2024) ============================ */
+var STD_DED = { single:14600, mfj:29200, mfs:14600, hoh:21900 };
+/* Brackets: [lowerThreshold, rate]. Income above lower up to next threshold taxed at rate. */
+var FED = {
+  single: [[0,0.10],[11600,0.12],[47150,0.22],[100525,0.24],[191950,0.32],[243725,0.35],[609350,0.37]],
+  mfj:    [[0,0.10],[23200,0.12],[94300,0.22],[201050,0.24],[383900,0.32],[487450,0.35],[731200,0.37]],
+  mfs:    [[0,0.10],[11600,0.12],[47150,0.22],[100525,0.24],[191950,0.32],[243725,0.35],[365600,0.37]],
+  hoh:    [[0,0.10],[16550,0.12],[63100,0.22],[100500,0.24],[191950,0.32],[243700,0.35],[609350,0.37]]
+};
+function bracketTax(taxable, filing){
+  if (taxable <= 0) return 0;
+  var b = FED[filing] || FED.single;
+  var tax = 0;
+  for (var i=0;i<b.length;i++){
+    var lower = b[i][0];
+    var upper = (i < b.length-1) ? b[i+1][0] : Infinity;
+    if (taxable > lower){
+      var amount = Math.min(taxable, upper) - lower;
+      tax += amount * b[i][1];
+    }
+  }
+  return tax;
+}
+function marginalRate(taxable, filing){
+  if (taxable <= 0) return 0;
+  var b = FED[filing] || FED.single;
+  var rate = b[0][1];
+  for (var i=0;i<b.length;i++){
+    if (taxable > b[i][0]) rate = b[i][1];
+  }
+  return rate * 100;
+}
+
+/* ============================ PURE CALC FUNCTIONS ============================ */
+function calcCompound(p){
+  // p: {P, c, r(decimal), n, Y, infl(decimal, optional)}
+  var contribPerPeriod = p.c * (12 / p.n);
+  var rp = p.r / p.n;
+  var bal = p.P, contributed = p.P;
+  var years = [];
+  var totalPeriods = p.Y * p.n;
+  var infl = (p.infl && p.infl > 0) ? p.infl : 0;
+  for (var per = 1; per <= totalPeriods; per++){
+    bal = bal * (1 + rp) + contribPerPeriod;
+    contributed += contribPerPeriod;
+    if (per % p.n === 0){
+      var yobj = { year: per / p.n, balance: bal, contributed: contributed, interest: bal - contributed };
+      if (infl > 0) yobj.real = bal / Math.pow(1 + infl, per / p.n);
+      years.push(yobj);
+    }
+  }
+  var out = { balance: bal, contributed: contributed, interest: bal - contributed, years: years };
+  if (infl > 0) out.real = bal / Math.pow(1 + infl, p.Y);
+  return out;
+}
+
+function calcGoal(p){
+  // p: {T, C, c, r(decimal), n}
+  if (p.C >= p.T) return { reachable:true, months:0, contributed:p.C, interest:0, final:p.C };
+  var rp = p.r / p.n;
+  var contribPerPeriod = p.c * (12 / p.n);
+  var bal = p.C, contributed = p.C, months = 0;
+  var cap = 100 * 12;
+  while (bal < p.T && months < cap){
+    bal = bal * (1 + rp) + contribPerPeriod;
+    contributed += contribPerPeriod;
+    months++;
+  }
+  return { reachable: months < cap, months: months, contributed: contributed, interest: bal - contributed, final: bal };
+}
+
+function calcPaycheck(p){
+  // p: { gross, freq, filing, k401(frac), stateRate(frac), health(per period) }
+  var grossAnnual = p.gross * p.freq;
+  var k401Annual = grossAnnual * p.k401;
+  var healthAnnual = p.health * p.freq;
+  var pretax = k401Annual + healthAnnual;
+  var fedBase = Math.max(0, grossAnnual - pretax - (STD_DED[p.filing] || STD_DED.single));
+  var fedTax = bracketTax(fedBase, p.filing);
+  var ssWage = Math.min(grossAnnual, 168600);
+  var ss = ssWage * 0.062;
+  var medicare = grossAnnual * 0.0145;
+  var addMed = grossAnnual > 200000 ? (grossAnnual - 200000) * 0.009 : 0;
+  var fica = ss + medicare + addMed;
+  var stateTax = grossAnnual * p.stateRate;
+  var totalDeductions = pretax + fedTax + stateTax + fica;
+  var netAnnual = grossAnnual - totalDeductions;
+  return {
+    grossAnnual: grossAnnual,
+    k401Annual: k401Annual,
+    healthAnnual: healthAnnual,
+    fedBase: fedBase,
+    fedTax: fedTax,
+    stateTax: stateTax,
+    ss: ss, medicare: medicare, addMed: addMed, fica: fica,
+    totalDeductions: totalDeductions,
+    netAnnual: netAnnual,
+    netPer: netAnnual / p.freq
+  };
+}
+
+function calcIncomeTax(p){
+  // p: { income, filing, deductionType, itemized }
+  var deduction = (p.deductionType === "itemized" && p.itemized > 0) ? p.itemized : (STD_DED[p.filing] || STD_DED.single);
+  var taxable = Math.max(0, p.income - deduction);
+  var tax = bracketTax(taxable, p.filing);
+  var effective = p.income > 0 ? (tax / p.income) * 100 : 0;
+  var marginal = marginalRate(taxable, p.filing);
+  return {
+    deduction: deduction,
+    taxable: taxable,
+    tax: tax,
+    effectiveRate: effective,
+    marginalRate: marginal,
+    afterTax: p.income - tax
+  };
+}
+
+function calcInfl(p){
+  // p: {amt, yrs, inf(decimal)}
+  var future = p.amt * Math.pow(1 + p.inf, p.yrs);
+  return { future: future, real: p.amt, loss: future - p.amt };
+}
+
+function calcEF(p){
+  // p: {e}
+  return { t3: p.e*3, t6: p.e*6, t9: p.e*9 };
+}
+
+function calcFIRE(p){
+  // p: {age, retAge, S, E, A, r(decimal), swr(decimal)}
+  var target = p.swr > 0 ? p.E / p.swr : Infinity;
+  if (!isFinite(target)) return { reachable:false, target:0, years:0, fireAge:p.age, saved:0 };
+  var bal = p.S, years = 0; var series = [{ year:p.age, balance:bal }];
+  var cap = 120;
+  while (bal < target && years < cap){
+    bal = bal * (1 + p.r) + p.A; years++;
+    series.push({ year: p.age + years, balance: bal });
+  }
+  return { reachable: years < cap, target: target, years: years, fireAge: p.age + years, saved: p.S + p.A * years, series: series };
+}
+
+/* Approximate U.S. Federal Reserve Survey of Consumer Finances (2022) median net worth by age.
+   Figures are widely-cited approximate medians, used only as an illustrative benchmark. */
+var NW_BENCH = [
+  { max:35, median:39000 },
+  { min:35, max:45, median:135600 },
+  { min:45, max:55, median:247200 },
+  { min:55, max:65, median:364500 },
+  { min:65, max:75, median:409900 },
+  { min:75, max:999, median:335600 }
+];
+function medianForAge(a){
+  for (var i=0;i<NW_BENCH.length;i++){
+    var b = NW_BENCH[i];
+    var lo = (b.min != null) ? b.min : 0;
+    var hi = (b.max != null) ? b.max : 999;
+    if (a >= lo && a < hi) return b.median;
+  }
+  return NW_BENCH[NW_BENCH.length-1].median;
+}
+/* Standard normal CDF (Hastings approximation). */
+function normalCdf(x){
+  var t = 1/(1 + 0.2316419*Math.abs(x));
+  var d = 0.3989423*Math.exp(-x*x/2);
+  var p = d*t*(0.3193815 + t*(-0.3565638 + t*(1.781478 + t*(-1.821256 + t*1.330274))));
+  return x > 0 ? 1 - p : p;
+}
+/* Simplified log-normal percentile estimate: median = 50th percentile, sigma assumption stated in UI. */
+function estPercentile(nw, median){
+  if (!(nw > 0) || !(median > 0)) return 1;
+  var sigma = 0.9;
+  var z = Math.log(nw / median) / sigma;
+  var pct = normalCdf(z) * 100;
+  return Math.max(1, Math.min(99, Math.round(pct)));
+}
+function calcNetWorth(p){
+  // p: {age, current, annual, r(decimal), years, target(optional >0)}
+  var Y = p.years;
+  var bal = p.current;
+  var series = [{ year: p.age, balance: bal }];
+  for (var y=1; y<=Y; y++){
+    bal = bal*(1+p.r) + p.annual;
+    series.push({ year: p.age + y, balance: bal });
+  }
+  var out = { projection: bal, series: series };
+  if (p.target && p.target > 0){
+    var fvCurrent = p.current * Math.pow(1+p.r, Y);
+    var gapToFill = Math.max(0, p.target - fvCurrent);
+    var reqAnnual = 0;
+    if (p.r > 0 && Y > 0) reqAnnual = gapToFill * p.r / (Math.pow(1+p.r, Y) - 1);
+    else reqAnnual = Y > 0 ? gapToFill / Y : 0;
+    out.target = p.target;
+    out.gap = p.target - bal;            // remaining gap under current plan at year Y
+    out.reqAnnual = reqAnnual;          // annual contribution needed to hit target from today
+    out.extraAnnual = Math.max(0, reqAnnual - p.annual);
+  }
+  return out;
+}
+
+/* ============================ AMORTIZATION / LOAN ============================ */
+/* Shared amortization engine: builds a month-by-month schedule and aggregates
+   it into yearly rows + a remaining-balance series for charting.
+   Returns the base monthly payment M, total interest, total paid, actual months,
+   yearly schedule rows, and (when extra>0) interest saved vs the base schedule. */
+function amortize(P, annualRate, years, extraMonthly){
+  extraMonthly = extraMonthly || 0;
+  var r = annualRate / 12;                 // monthly rate
+  var n = Math.max(1, Math.round(years * 12));
+  var M = (r === 0) ? P / n : P * r / (1 - Math.pow(1 + r, -n));
+  var bal = P, month = 0, totalInterest = 0;
+  var baseTotalInterest = (r === 0) ? 0 : (M * n - P);
+  var monthly = [];
+  while (bal > 0.005 && month < 2000){
+    month++;
+    var interest = bal * r;
+    var pay = M + extraMonthly;
+    var principal = pay - interest;
+    if (principal >= bal) principal = bal;   // final payment covers remainder
+    bal -= principal;
+    if (bal < 0) bal = 0;
+    totalInterest += interest;
+    monthly.push({ interest: interest, principal: principal, balance: bal });
+  }
+  // aggregate monthly rows into yearly rows
+  var yearly = [];
+  for (var y = 0; y < monthly.length; y += 12){
+    var slice = monthly.slice(y, y + 12);
+    var yi = 0, yp = 0;
+    slice.forEach(function(m){ yi += m.interest; yp += m.principal; });
+    var begin = (y === 0) ? P : monthly[y - 1].balance;
+    var end = slice[slice.length - 1].balance;
+    yearly.push({ year: Math.floor(y / 12) + 1, begin: begin, interest: yi, principal: yp, end: end });
+  }
+  var balanceSeries = yearly.map(function(w){ return w.end; });
+  return {
+    principal: P,
+    monthlyPayment: M + extraMonthly,
+    months: monthly.length,
+    totalInterest: totalInterest,
+    totalPaid: P + totalInterest,
+    interestSaved: Math.max(0, baseTotalInterest - totalInterest),
+    yearly: yearly,
+    balanceSeries: balanceSeries
+  };
+}
+
+function calcAmortization(p){
+  // p: { amount, rate(decimal), years, extra(per month) }
+  return amortize(p.amount, p.rate, p.years, p.extra || 0);
+}
+
+function calcLoan(p){
+  // p: { price, down, tradeIn, apr(decimal), termMonths }
+  var financed = Math.max(0, p.price - (p.down || 0) - (p.tradeIn || 0));
+  var am = amortize(financed, p.apr, p.termMonths / 12, 0);
+  return {
+    financed: financed,
+    termMonths: p.termMonths,
+    monthlyPayment: am.monthlyPayment,
+    totalInterest: am.totalInterest,
+    totalPaid: am.totalPaid,
+    months: am.months,
+    yearly: am.yearly,
+    balanceSeries: am.balanceSeries
+  };
+}
+
+/* ============================ CHARTS (SVG string) ============================ */
+function svgLineChart(series, opts){
+  opts = opts || {};
+  var W = 640, H = 300, padL = 58, padR = 16, padT = 14, padB = 34;
+  var plotW = W - padL - padR, plotH = H - padT - padB;
+  var n = series[0].values.length;
+  if (n === 0) return "";
+  var yMax = opts.yMax || 0;
+  series.forEach(function(s){ s.values.forEach(function(v){ if (v > yMax) yMax = v; }); });
+  if (yMax <= 0) yMax = 1;
+  var xAt = function(i){ return n === 1 ? padL + plotW/2 : padL + (i/(n-1))*plotW; };
+  var yAt = function(v){ return padT + plotH - (v/yMax)*plotH; };
+  var svg = '<svg viewBox="0 0 '+W+' '+H+'" width="100%" preserveAspectRatio="xMidYMid meet" role="img">';
+  // gridlines + y labels
+  for (var g=0; g<=4; g++){
+    var gy = padT + (g/4)*plotH;
+    var val = yMax * (1 - g/4);
+    svg += '<line x1="'+padL+'" y1="'+gy+'" x2="'+(W-padR)+'" y2="'+gy+'" stroke="var(--border)" stroke-width="1"/>';
+    svg += '<text x="'+(padL-8)+'" y="'+(gy+4)+'" text-anchor="end" font-size="11" fill="var(--muted)">'+fmtShort(val)+'</text>';
+  }
+  // x labels
+  var step = Math.max(1, Math.ceil(n/6));
+  for (var i=0;i<n;i+=step){
+    svg += '<text x="'+xAt(i)+'" y="'+(H-12)+'" text-anchor="middle" font-size="11" fill="var(--muted)">'+(opts.xLabels?opts.xLabels[i]:i+1)+'</text>';
+  }
+  // series
+  series.forEach(function(s){
+    if (s.fill){
+      var area = "M "+xAt(0)+" "+yAt(0);
+      for (var i=0;i<n;i++) area += " L "+xAt(i)+" "+yAt(s.values[i]);
+      area += " L "+xAt(n-1)+" "+yAt(0)+" Z";
+      svg += '<path d="'+area+'" fill="'+s.color+'" opacity="0.12"/>';
+    }
+    var line = "M "+xAt(0)+" "+yAt(s.values[0]);
+    for (var k=1;k<n;k++) line += " L "+xAt(k)+" "+yAt(s.values[k]);
+    svg += '<path d="'+line+'" fill="none" stroke="'+s.color+'" stroke-width="2.5" stroke-linejoin="round"/>';
+    // end dot
+    svg += '<circle cx="'+xAt(n-1)+'" cy="'+yAt(s.values[n-1])+'" r="3.5" fill="'+s.color+'"/>';
+  });
+  svg += '</svg>';
+  return svg;
+}
+
+function svgBarChart(bars, opts){
+  opts = opts || {};
+  var W = 640, H = 240, padL = 58, padR = 16, padT = 14, padB = 40;
+  var plotW = W - padL - padR, plotH = H - padT - padB;
+  var max = opts.yMax || 0;
+  bars.forEach(function(b){ if (b.value > max) max = b.value; });
+  if (max <= 0) max = 1;
+  var yAt = function(v){ return padT + plotH - (v/max)*plotH; };
+  var svg = '<svg viewBox="0 0 '+W+' '+H+'" width="100%" preserveAspectRatio="xMidYMid meet" role="img">';
+  for (var g=0; g<=4; g++){
+    var gy = padT + (g/4)*plotH; var val = max*(1-g/4);
+    svg += '<line x1="'+padL+'" y1="'+gy+'" x2="'+(W-padR)+'" y2="'+gy+'" stroke="var(--border)" stroke-width="1"/>';
+    svg += '<text x="'+(padL-8)+'" y="'+(gy+4)+'" text-anchor="end" font-size="11" fill="var(--muted)">'+fmtShort(val)+'</text>';
+  }
+  var bw = Math.min(120, plotW / (bars.length*1.8));
+  var gap = (plotW - bw*bars.length) / (bars.length+1);
+  for (var i=0;i<bars.length;i++){
+    var x = padL + gap + i*(bw+gap);
+    var y = yAt(bars[i].value);
+    var h = padT + plotH - y;
+    svg += '<rect x="'+x+'" y="'+y+'" width="'+bw+'" height="'+h+'" rx="6" fill="'+bars[i].color+'"/>';
+    svg += '<text x="'+(x+bw/2)+'" y="'+(y-7)+'" text-anchor="middle" font-size="12" font-weight="700" fill="var(--text)">'+bars[i].label+'</text>';
+    svg += '<text x="'+(x+bw/2)+'" y="'+(H-18)+'" text-anchor="middle" font-size="12" fill="var(--muted)">'+bars[i].name+'</text>';
+  }
+  svg += '</svg>';
+  return svg;
+}
+
+/* ============================ RENDERERS ============================ */
+function renderCompound(){
+  var doInfl = getEl("ci_adjust_inf") && getEl("ci_adjust_inf").checked;
+  var infl = doInfl ? (num("ci_inf")/100) : 0;
+  var r = calcCompound({ P:num("ci_principal"), c:num("ci_monthly"), r:num("ci_rate")/100, n:parseInt(getEl("ci_freq").value,10), Y:Math.max(1,Math.min(80,Math.round(num("ci_years")))), infl:infl });
+  var yrs = r.years;
+  var balSeries = yrs.map(function(y){ return y.balance; });
+  var contribSeries = yrs.map(function(y){ return y.contributed; });
+  var series = [
+    { color:"var(--primary)", values: balSeries, fill:true },
+    { color:"var(--accent)", values: contribSeries }
+  ];
+  var legend = '<div class="legend"><span><i style="background:var(--primary)"></i><span data-i18n="ci_out_balance">Future balance</span></span><span><i style="background:var(--accent)"></i><span data-i18n="ci_out_invested">Money you put in</span></span>';
+  if (doInfl){
+    series.push({ color:"#8b5cf6", values: yrs.map(function(y){ return y.real; }) });
+    legend += '<span><i style="background:#8b5cf6"></i><span data-i18n="ci_out_real">Real value (today\'s dollars)</span></span>';
+  }
+  legend += '</div>';
+  var realStat = doInfl ? '<div class="stat"><div class="k" data-i18n="ci_out_real">Real value (today\'s dollars)</div><div class="v">'+fmtMoney(r.real)+'</div></div>' : '';
+  var box = getEl("ci_result");
+  box.innerHTML =
+    '<div class="stat-row">'+
+      '<div class="stat primary"><div class="k" data-i18n="ci_out_balance">Future balance</div><div class="v">'+fmtMoney(r.balance)+'</div></div>'+
+      '<div class="stat"><div class="k" data-i18n="ci_out_contrib">Total contributed</div><div class="v">'+fmtMoney(r.contributed)+'</div></div>'+
+      '<div class="stat"><div class="k" data-i18n="ci_out_interest">Total interest</div><div class="v">'+fmtMoney(r.interest)+'</div></div>'+
+      realStat +
+    '</div>'+
+    '<div class="chart">'+ svgLineChart(series, { xLabels: yrs.map(function(y){ return y.year; }) }) +'</div>'+
+    legend +
+    '<div class="note" data-i18n="ci_note"></div>'+
+    (doInfl ? '<div class="note" data-i18n="ci_real_note"></div>' : '');
+  applyLangTo(box);
+}
+
+function renderGoal(){
+  var r = calcGoal({ T:num("sg_target"), C:num("sg_current"), c:num("sg_monthly"), r:num("sg_rate")/100, n:parseInt(getEl("sg_freq").value,10) });
+  var box = getEl("sg_result");
+  if (!r.reachable){
+    box.innerHTML = '<div class="note" data-i18n="sg_unreach"></div>'; applyLangTo(box); return;
+  }
+  var yrs = Math.floor(r.months/12), mos = r.months%12;
+  var timeStr = (yrs>0 ? yrs + (currentLang==="zh"?" 年 ":" years ") : "") + (mos>0 ? mos + (currentLang==="zh"?" 个月":" months") : (yrs>0?"":r.months+(currentLang==="zh"?" 个月":" months")));
+  box.innerHTML =
+    '<div class="stat-row">'+
+      '<div class="stat primary"><div class="k" data-i18n="sg_out_time">Time to reach goal</div><div class="v">'+timeStr+'</div></div>'+
+      '<div class="stat"><div class="k" data-i18n="sg_out_contrib">Total contributed</div><div class="v">'+fmtMoney(r.contributed)+'</div></div>'+
+      '<div class="stat"><div class="k" data-i18n="sg_out_interest">Interest earned</div><div class="v">'+fmtMoney(r.interest)+'</div></div>'+
+    '</div>'+
+    '<div class="note" data-i18n="sg_note"></div>';
+  applyLangTo(box);
+}
+
+function renderPaycheck(){
+  var r = calcPaycheck({
+    gross: num("py_gross"),
+    freq: parseInt(getEl("py_freq").value, 10),
+    filing: getEl("py_filing").value,
+    k401: num("py_401k")/100,
+    stateRate: num("py_state")/100,
+    health: num("py_health")
+  });
+  var box = getEl("py_result");
+  box.innerHTML =
+    '<div class="stat-row">'+
+      '<div class="stat primary"><div class="k" data-i18n="py_out_net">Net pay per period</div><div class="v">'+fmtMoney(r.netPer)+'</div></div>'+
+      '<div class="stat"><div class="k" data-i18n="py_out_net_year">Net pay per year</div><div class="v">'+fmtMoney(r.netAnnual)+'</div></div>'+
+      '<div class="stat"><div class="k" data-i18n="py_out_fed">Federal tax / yr</div><div class="v">'+fmtMoney(r.fedTax)+'</div></div>'+
+      '<div class="stat"><div class="k" data-i18n="py_out_state">State tax / yr</div><div class="v">'+fmtMoney(r.stateTax)+'</div></div>'+
+      '<div class="stat"><div class="k" data-i18n="py_out_fica">FICA / yr</div><div class="v">'+fmtMoney(r.fica)+'</div></div>'+
+      '<div class="stat"><div class="k" data-i18n="py_out_401k">401(k) / yr</div><div class="v">'+fmtMoney(r.k401Annual)+'</div></div>'+
+      '<div class="stat"><div class="k" data-i18n="py_out_total">Total deductions / yr</div><div class="v">'+fmtMoney(r.totalDeductions)+'</div></div>'+
+    '</div>'+
+    '<div class="note" data-i18n="py_note"></div>';
+  applyLangTo(box);
+}
+
+function renderIncomeTax(){
+  var r = calcIncomeTax({
+    income: num("tx_income"),
+    filing: getEl("tx_filing").value,
+    deductionType: getEl("tx_ded").value,
+    itemized: num("tx_item")
+  });
+  var box = getEl("tx_result");
+  box.innerHTML =
+    '<div class="stat-row">'+
+      '<div class="stat primary"><div class="k" data-i18n="tx_out_tax">Estimated federal tax</div><div class="v">'+fmtMoney(r.tax)+'</div></div>'+
+      '<div class="stat"><div class="k" data-i18n="tx_out_eff">Effective tax rate</div><div class="v">'+fmtPct(r.effectiveRate)+'</div></div>'+
+      '<div class="stat"><div class="k" data-i18n="tx_out_marg">Marginal tax rate</div><div class="v">'+fmtPct(r.marginalRate)+'</div></div>'+
+      '<div class="stat"><div class="k" data-i18n="tx_out_taxable">Taxable income</div><div class="v">'+fmtMoney(r.taxable)+'</div></div>'+
+      '<div class="stat"><div class="k" data-i18n="tx_out_after">After-tax income</div><div class="v">'+fmtMoney(r.afterTax)+'</div></div>'+
+    '</div>'+
+    '<div class="note" data-i18n="tx_note"></div>';
+  applyLangTo(box);
+}
+
+function renderInfl(){
+  var r = calcInfl({ amt:num("in_amount"), yrs:Math.max(1,Math.round(num("in_years"))), inf:num("in_rate")/100 });
+  var box = getEl("in_result");
+  box.innerHTML =
+    '<div class="stat-row">'+
+      '<div class="stat primary"><div class="k" data-i18n="in_out_future">Future nominal amount</div><div class="v">'+fmtMoney(r.future)+'</div></div>'+
+      '<div class="stat"><div class="k" data-i18n="in_out_real">Today\'s value</div><div class="v">'+fmtMoney(r.real)+'</div></div>'+
+      '<div class="stat"><div class="k" data-i18n="in_out_loss">Lost purchasing power</div><div class="v">'+fmtMoney(r.loss)+'</div></div>'+
+    '</div>'+
+    '<div class="note" data-i18n="in_note"></div>';
+  applyLangTo(box);
+}
+
+function renderEF(){
+  var r = calcEF({ e:num("ef_monthly") });
+  var box = getEl("ef_result");
+  box.innerHTML =
+    '<div class="stat-row">'+
+      '<div class="stat"><div class="k" data-i18n="ef_tier_min">Minimum (3 months)</div><div class="v">'+fmtMoney(r.t3)+'</div></div>'+
+      '<div class="stat primary"><div class="k" data-i18n="ef_tier_std">Standard (6 months)</div><div class="v">'+fmtMoney(r.t6)+'</div></div>'+
+      '<div class="stat"><div class="k" data-i18n="ef_tier_safe">Safety net (9 months)</div><div class="v">'+fmtMoney(r.t9)+'</div></div>'+
+    '</div>'+
+    '<div class="chart">'+ svgBarChart([
+        { name:"3", value:r.t3, color:"var(--accent)", label:fmtShort(r.t3) },
+        { name:"6", value:r.t6, color:"var(--primary)", label:fmtShort(r.t6) },
+        { name:"9", value:r.t9, color:"var(--primary-d)", label:fmtShort(r.t9) }
+      ]) +'</div>'+
+    '<div class="note" data-i18n="ef_note"></div>';
+  applyLangTo(box);
+}
+
+function renderFIRE(){
+  var r = calcFIRE({ age:Math.max(16,Math.round(num("fr_age"))), retAge:num("fr_age"), S:num("fr_savings"), E:num("fr_spend"), A:num("fr_annual"), r:num("fr_return")/100, swr:num("fr_swr")/100 });
+  var box = getEl("fire_result");
+  if (!r.reachable){
+    box.innerHTML = '<div class="note" data-i18n="fire_unreach"></div>'; applyLangTo(box); return;
+  }
+  var doInfl = getEl("fr_adjust_inf") && getEl("fr_adjust_inf").checked;
+  var infl = doInfl ? (num("fr_inf")/100) : 0;
+  var balSeries = r.series.map(function(s){ return s.balance; });
+  var targetSeries = r.series.map(function(s){ return r.target; });
+  var series = [
+    { color:"var(--primary)", values: balSeries, fill:true },
+    { color:"var(--warn)", values: targetSeries }
+  ];
+  var legend = '<div class="legend"><span><i style="background:var(--primary)"></i><span data-i18n="fire_out_saved">Portfolio</span></span><span><i style="background:var(--warn)"></i><span data-i18n="fire_out_target">FIRE number</span></span>';
+  var adjStat = '';
+  if (doInfl){
+    var adjTarget = r.target * Math.pow(1 + infl, r.years);
+    var adjSeries = r.series.map(function(s){ return r.target * Math.pow(1 + infl, s.year - r.series[0].year); });
+    series.push({ color:"#8b5cf6", values: adjSeries });
+    legend += '<span><i style="background:#8b5cf6"></i><span data-i18n="fire_out_target_adj">Inflation-adjusted FIRE number</span></span>';
+    adjStat = '<div class="stat"><div class="k" data-i18n="fire_out_target_adj">Inflation-adjusted FIRE number</div><div class="v">'+fmtMoney(adjTarget)+'</div></div>';
+  }
+  legend += '</div>';
+  box.innerHTML =
+    '<div class="stat-row">'+
+      '<div class="stat primary"><div class="k" data-i18n="fire_out_target">FIRE number</div><div class="v">'+fmtMoney(r.target)+'</div></div>'+
+      '<div class="stat"><div class="k" data-i18n="fire_out_age">Age at FIRE</div><div class="v">'+r.fireAge+'</div></div>'+
+      '<div class="stat"><div class="k" data-i18n="fire_out_years">Years to go</div><div class="v">'+r.years+'</div></div>'+
+      adjStat +
+    '</div>'+
+    '<div class="chart">'+ svgLineChart(series, { xLabels: r.series.map(function(s){ return s.year; }) }) +'</div>'+
+    legend +
+    '<div class="note" data-i18n="fire_note"></div>'+
+    (doInfl ? '<div class="note" data-i18n="fire_adj_note"></div>' : '');
+  applyLangTo(box);
+}
+
+function renderNetWorth(){
+  var age = Math.max(16, Math.min(90, Math.round(num("nw_age"))));
+  var current = num("nw_current");
+  var annual = num("nw_annual");
+  var r = num("nw_return")/100;
+  var years = Math.max(1, Math.min(80, Math.round(num("nw_years"))));
+  var target = num("nw_target");
+  var median = medianForAge(age);
+  var nw = calcNetWorth({ age:age, current:current, annual:annual, r:r, years:years, target: target>0?target:0 });
+  var pct = estPercentile(current, median);
+  var box = getEl("nw_result");
+  var stats = '';
+  stats += '<div class="stat primary"><div class="k" data-i18n="nw_out_median">Median for your age (US)</div><div class="v">'+fmtMoney(median)+'</div></div>';
+  stats += '<div class="stat"><div class="k" data-i18n="nw_out_standing">Your standing</div><div class="v"><span class="standing">~'+pct+(currentLang==="zh"?" 百分位":"th percentile")+'</span></div></div>';
+  stats += '<div class="stat"><div class="k" data-i18n="nw_out_proj">Projected net worth</div><div class="v">'+fmtMoney(nw.projection)+'</div></div>';
+  var gapBlock = '';
+  if (target > 0){
+    if (nw.gap <= 0){
+      stats += '<div class="stat"><div class="k" data-i18n="nw_out_gap">Gap to target</div><div class="v" style="color:var(--good)">'+fmtMoney(nw.gap)+'</div></div>';
+      gapBlock = '<div class="note" data-i18n="nw_on_track" style="border-color:var(--good);background:color-mix(in srgb,var(--good) 10%,var(--surface-2))"></div>';
+    } else {
+      stats += '<div class="stat"><div class="k" data-i18n="nw_out_gap">Gap to target</div><div class="v">'+fmtMoney(nw.gap)+'</div></div>';
+      stats += '<div class="stat"><div class="k" data-i18n="nw_out_req">Extra to save per year</div><div class="v">'+fmtMoney(nw.extraAnnual)+'</div></div>';
+      gapBlock = '<div class="note" data-i18n="nw_gap_msg" style="border-color:var(--accent);background:color-mix(in srgb,var(--accent) 10%,var(--surface-2))"></div>';
+    }
+  }
+  var projSeries = nw.series.map(function(s){ return s.balance; });
+  var medSeries = nw.series.map(function(s){ return median; });
+  var chartSeries = [
+    { color:"var(--primary)", values: projSeries, fill:true },
+    { color:"var(--accent)", values: medSeries }
+  ];
+  var legend = '<div class="legend"><span><i style="background:var(--primary)"></i><span data-i18n="nw_out_proj">Projected net worth</span></span><span><i style="background:var(--accent)"></i><span data-i18n="nw_out_median">Median for your age (US)</span></span>';
+  if (target > 0){
+    chartSeries.push({ color:"#8b5cf6", values: nw.series.map(function(s){ return target; }) });
+    legend += '<span><i style="background:#8b5cf6"></i><span data-i18n="nw_out_target">Target net worth</span></span>';
+  }
+  legend += '</div>';
+  var bench = '<h3 style="margin:16px 0 4px;font-size:16px" data-i18n="nw_bench_title">Approximate U.S. median net worth by age</h3>';
+  bench += '<table class="median-table"><thead><tr><th data-i18n="nw_bench_age">Age</th><th data-i18n="nw_bench_med">Median net worth</th></tr></thead><tbody>';
+  var rows = [["<35","$39,000"],["35–44","$135,600"],["45–54","$247,200"],["55–64","$364,500"],["65–74","$409,900"],["75+","$335,600"]];
+  rows.forEach(function(rw){ bench += '<tr><td>'+rw[0]+'</td><td>'+rw[1]+'</td></tr>'; });
+  bench += '</tbody></table>';
+  bench += '<div class="note" data-i18n="nw_bench_note"></div>';
+  box.innerHTML =
+    '<div class="stat-row">'+stats+'</div>'+
+    (gapBlock ? gapBlock : '')+
+    '<div class="chart">'+ svgLineChart(chartSeries, { xLabels: nw.series.map(function(s){ return s.year; }) }) +'</div>'+
+    legend +
+    bench;
+  applyLangTo(box);
+  if (target > 0){
+    var note = box.querySelector('[data-i18n="nw_on_track"]');
+    if (note && nw.gap <= 0) note.textContent = I18N[currentLang].nw_on_track.replace("{x}", fmtMoney(-nw.gap));
+    var gnote = box.querySelector('[data-i18n="nw_gap_msg"]');
+    if (gnote && nw.gap > 0) gnote.textContent = I18N[currentLang].nw_gap_msg.replace("{y}", years).replace("{a}", fmtMoney(nw.extraAnnual)).replace("{m}", fmtMoney(nw.extraAnnual/12));
+  }
+}
+
+/* ============================ AMORTIZATION / LOAN RENDERERS ============================ */
+function renderAmortization(){
+  var r = calcAmortization({
+    amount: num("am_amount"),
+    rate: num("am_rate")/100,
+    years: Math.max(0.1, num("am_years")),
+    extra: num("am_extra")
+  });
+  var box = getEl("am_result");
+  var yrs = Math.floor(r.months/12), mos = r.months%12;
+  var payoffStr = (yrs>0 ? yrs + (currentLang==="zh"?" 年 ":" years ") : "") + (mos>0 ? mos + (currentLang==="zh"?" 个月":" months") : (yrs>0?"":r.months+(currentLang==="zh"?" 个月":" months")));
+  var yLabels = r.yearly.map(function(w){ return w.year; });
+  // yearly amortization schedule table
+  var table = '<div style="max-height:300px;overflow:auto;margin-top:14px"><table class="median-table"><thead><tr>'+
+    '<th data-i18n="am_t_year">Year</th><th data-i18n="am_t_begin">Beginning balance</th><th data-i18n="am_t_int">Interest</th><th data-i18n="am_t_princ">Principal</th><th data-i18n="am_t_end">Ending balance</th>'+
+    '</tr></thead><tbody>';
+  r.yearly.forEach(function(w){
+    table += '<tr><td>'+w.year+'</td><td>'+fmtMoney(w.begin)+'</td><td>'+fmtMoney(w.interest)+'</td><td>'+fmtMoney(w.principal)+'</td><td>'+fmtMoney(w.end)+'</td></tr>';
+  });
+  table += '</tbody></table></div>';
+  var savedStat = (num("am_extra")>0)
+    ? '<div class="stat"><div class="k" data-i18n="am_out_saved">Interest saved (with extra)</div><div class="v" style="color:var(--good)">'+fmtMoney(r.interestSaved)+'</div></div>'
+    : '';
+  box.innerHTML =
+    '<div class="stat-row">'+
+      '<div class="stat primary"><div class="k" data-i18n="am_out_payment">Monthly payment</div><div class="v">'+fmtMoney2(r.monthlyPayment)+'</div></div>'+
+      '<div class="stat"><div class="k" data-i18n="am_out_interest">Total interest</div><div class="v">'+fmtMoney(r.totalInterest)+'</div></div>'+
+      '<div class="stat"><div class="k" data-i18n="am_out_total">Total of payments</div><div class="v">'+fmtMoney(r.totalPaid)+'</div></div>'+
+      '<div class="stat"><div class="k" data-i18n="am_out_payoff">Payoff time</div><div class="v">'+payoffStr+'</div></div>'+
+      savedStat +
+    '</div>'+
+    '<div class="chart">'+ svgLineChart([{ color:"var(--primary)", values: r.balanceSeries, fill:true }], { xLabels: yLabels }) +'</div>'+
+    '<div class="legend"><span><i style="background:var(--primary)"></i><span data-i18n="am_out_balance">Remaining balance</span></span></div>'+
+    table +
+    '<div class="note" data-i18n="am_note"></div>';
+  applyLangTo(box);
+}
+
+function renderLoan(){
+  var r = calcLoan({
+    price: num("ln_price"),
+    down: num("ln_down"),
+    tradeIn: num("ln_trade"),
+    apr: num("ln_rate")/100,
+    termMonths: parseInt(getEl("ln_term").value, 10)
+  });
+  var box = getEl("ln_result");
+  if (r.financed <= 0){
+    box.innerHTML = '<div class="note" data-i18n="ln_zero"></div>';
+    applyLangTo(box); return;
+  }
+  var yLabels = r.yearly.map(function(w){ return w.year; });
+  box.innerHTML =
+    '<div class="stat-row">'+
+      '<div class="stat primary"><div class="k" data-i18n="ln_out_payment">Monthly payment</div><div class="v">'+fmtMoney2(r.monthlyPayment)+'</div></div>'+
+      '<div class="stat"><div class="k" data-i18n="ln_out_financed">Amount financed</div><div class="v">'+fmtMoney(r.financed)+'</div></div>'+
+      '<div class="stat"><div class="k" data-i18n="ln_out_interest">Total interest</div><div class="v">'+fmtMoney(r.totalInterest)+'</div></div>'+
+      '<div class="stat"><div class="k" data-i18n="ln_out_total">Total of payments</div><div class="v">'+fmtMoney(r.totalPaid)+'</div></div>'+
+    '</div>'+
+    '<div class="chart">'+ svgLineChart([{ color:"var(--accent)", values: r.balanceSeries, fill:true }], { xLabels: yLabels }) +'</div>'+
+    '<div class="legend"><span><i style="background:var(--accent)"></i><span data-i18n="ln_out_balance">Loan balance</span></span></div>'+
+    '<div class="note" data-i18n="ln_note"></div>';
+  applyLangTo(box);
+}
+
+/* ============================ i18n apply ============================ */
+function applyLangTo(root){
+  root = root || document;
+  var dict = I18N[currentLang];
+  var nodes = root.querySelectorAll("[data-i18n]");
+  for (var i=0;i<nodes.length;i++){
+    var key = nodes[i].getAttribute("data-i18n");
+    if (dict[key] != null) nodes[i].textContent = dict[key];
+  }
+  var ph = root.querySelectorAll("[data-i18n-ph]");
+  for (var j=0;j<ph.length;j++){
+    var pk = ph[j].getAttribute("data-i18n-ph");
+    if (dict[pk] != null) ph[j].setAttribute("placeholder", dict[pk]);
+  }
+}
+function applyLang(){
+  currentLang = currentLang === "en" ? currentLang : currentLang;
+  document.documentElement.lang = currentLang === "zh" ? "zh-CN" : "en";
+  var dict = I18N[currentLang];
+  // static nodes across page
+  applyLangTo(document);
+  renderBooks();
+  // lang button label
+  getEl("langBtn").textContent = dict.langLabel;
+  getEl("themeBtn").querySelector("span").textContent = dict.theme;
+  // re-render results so they reflect language
+  if (getEl("ci_result").dataset.done) renderCompound();
+  if (getEl("sg_result").dataset.done) renderGoal();
+  if (getEl("py_result").dataset.done) renderPaycheck();
+  if (getEl("tx_result").dataset.done) renderIncomeTax();
+  if (getEl("in_result").dataset.done) renderInfl();
+  if (getEl("ef_result").dataset.done) renderEF();
+  if (getEl("fire_result").dataset.done) renderFIRE();
+  if (getEl("nw_result").dataset.done) renderNetWorth();
+  if (getEl("am_result").dataset.done) renderAmortization();
+  if (getEl("ln_result").dataset.done) renderLoan();
+  // footer note (set directly to preserve the year)
+  getEl("footNote").textContent = dict.foot_note.replace("{year}", new Date().getFullYear());
+  if (getEl("footUpdated")) getEl("footUpdated").textContent = dict.foot_updated;
+}
+
+function renderBooks(){
+  var dict = I18N[currentLang];
+  var host = getEl("bookList");
+  if (!host) return;
+  host.innerHTML = "";
+  dict.books.forEach(function(b){
+    var tag = "pennora-20";
+    var url = "https://www.amazon.com/dp/"+b.q+"/?tag="+tag;
+    var card = document.createElement("div");
+    card.className = "book";
+    card.innerHTML =
+      '<div class="t">'+escapeAttr(b.t)+'</div>'+
+      '<div class="a">'+escapeAttr(b.a)+'</div>'+
+      '<a class="buy" href="'+url+'" target="_blank" rel="sponsored nofollow noopener">'+ (currentLang==="zh"?"在 Amazon 查看":"View on Amazon") +'</a>';
+    host.appendChild(card);
+  });
+}
+function escapeAttr(s){ return String(s).replace(/"/g,'&quot;'); }
+
+/* ============================ tool nav ============================ */
+function autoRender(id){
+  if (id === "tool-compound"){ markDone("ci_result"); renderCompound(); }
+  else if (id === "tool-goal"){ markDone("sg_result"); renderGoal(); }
+  else if (id === "tool-pay"){ markDone("py_result"); renderPaycheck(); }
+  else if (id === "tool-tax"){ markDone("tx_result"); renderIncomeTax(); }
+  else if (id === "tool-infl"){ markDone("in_result"); renderInfl(); }
+  else if (id === "tool-ef"){ markDone("ef_result"); renderEF(); }
+  else if (id === "tool-fire"){ markDone("fire_result"); renderFIRE(); }
+  else if (id === "tool-nw"){ markDone("nw_result"); renderNetWorth(); }
+  else if (id === "tool-amort"){ markDone("am_result"); renderAmortization(); }
+  else if (id === "tool-loan"){ markDone("ln_result"); renderLoan(); }
+}
+function buildToolNav(){
+  var dict = I18N[currentLang];
+  var tools = [
+    { id:"tool-compound", key:"t_compound_title", ic:'<path d="M3 17l5-5 4 3 8-8" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M16 7h4v4" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>' },
+    { id:"tool-goal", key:"t_goal_title", ic:'<path d="M4 19V9l8-5 8 5v10" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 19v-6h6v6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>' },
+    { id:"tool-pay", key:"t_pay_title", ic:'<rect x="3" y="7" width="18" height="12" rx="2" stroke="currentColor" stroke-width="2" fill="none"/><circle cx="12" cy="13" r="2.6" stroke="currentColor" stroke-width="2" fill="none"/><path d="M7 7V5a2 2 0 012-2h6a2 2 0 012 2v2" stroke="currentColor" stroke-width="2" fill="none"/>' },
+    { id:"tool-tax", key:"t_tax_title", ic:'<path d="M6 3h12v18l-3-2-3 2-3-2-3 2V3z" stroke="currentColor" stroke-width="2" fill="none" stroke-linejoin="round"/><path d="M9 8h6M9 12h6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/>' },
+    { id:"tool-infl", key:"t_infl_title", ic:'<path d="M4 20l16-16M8 8h.01M16 16h.01" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/><path d="M5 14c3-6 11-6 14 0" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/>' },
+    { id:"tool-ef", key:"t_ef_title", ic:'<path d="M12 3l7 3v5c0 4-3 7-7 9-4-2-7-5-7-9V6l7-3z" stroke="currentColor" stroke-width="2" fill="none" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>' },
+    { id:"tool-fire", key:"t_fire_title", ic:'<path d="M12 3c1 3-2 4-2 7a4 4 0 008 0c0-1-.3-2-1-3 2 1 4 3 4 6a7 7 0 11-14 0c0-4 4-6 5-10z" stroke="currentColor" stroke-width="2" fill="none" stroke-linejoin="round"/>' },
+    { id:"tool-nw", key:"t_nw_title", ic:'<circle cx="9" cy="8" r="3.2" stroke="currentColor" stroke-width="2" fill="none"/><path d="M3.5 20c0-3 2.5-5 5.5-5s5.5 2 5.5 5" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="17" cy="9" r="2.4" stroke="currentColor" stroke-width="2" fill="none"/><path d="M14.5 19.5c.4-2.4 2.2-4 4-4s3.2 1.6 3.5 4" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/>' },
+    { id:"tool-amort", key:"t_amort_title", ic:'<path d="M3 17l5-5 4 3 8-8" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M16 7h4v4" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>' },
+    { id:"tool-loan", key:"t_loan_title", ic:'<path d="M5 11l1.5-4h11L19 11M5 11h14v5H5z" stroke="currentColor" stroke-width="2" fill="none" stroke-linejoin="round"/><circle cx="8" cy="17" r="1.6" stroke="currentColor" stroke-width="2" fill="none"/><circle cx="16" cy="17" r="1.6" stroke="currentColor" stroke-width="2" fill="none"/>' }
+  ];
+  var nav = getEl("toolnav");
+  nav.innerHTML = "";
+  tools.forEach(function(t, idx){
+    var b = document.createElement("button");
+    b.setAttribute("data-target", t.id);
+    b.innerHTML = '<svg class="ic" viewBox="0 0 24 24" style="color:var(--primary)">'+t.ic+'</svg><span data-i18n="'+t.key+'">'+dict[t.key]+'</span>';
+    if (idx === 0) b.classList.add("active");
+    b.addEventListener("click", function(){
+      // Tab switch: hide all sections, show the target
+      tools.forEach(function(tt){ getEl(tt.id).classList.remove("active"); });
+      getEl(t.id).classList.add("active");
+      nav.querySelectorAll("button").forEach(function(x){ x.classList.remove("active"); });
+      b.classList.add("active");
+      autoRender(t.id);
+      nav.scrollIntoView({ behavior:"smooth", block:"start" });
+    });
+    nav.appendChild(b);
+  });
+  // first tool visible by default
+  getEl(tools[0].id).classList.add("active");
+}
+
+function activateFromHash(){
+  var h = (location.hash || "").replace(/^#/, "");
+  if (!h) return;
+  var ids = ["tool-compound","tool-goal","tool-pay","tool-tax","tool-infl","tool-ef","tool-fire","tool-nw","tool-amort","tool-loan"];
+  if (ids.indexOf(h) === -1) return;
+  var nav = getEl("toolnav");
+  document.querySelectorAll(".block.active").forEach(function(x){ x.classList.remove("active"); });
+  getEl(h).classList.add("active");
+  if (nav) nav.querySelectorAll("button").forEach(function(x){
+    x.classList.remove("active");
+    if (x.getAttribute("data-target") === h) x.classList.add("active");
+  });
+  autoRender(h);
+}
+
+/* ============================ init ============================ */
+function markDone(id){ getEl(id).dataset.done = "1"; }
+function init(){
+  // persisted prefs
+  try {
+    var pl = localStorage.getItem("pennora_lang");
+    if (pl === "zh" || pl === "en") currentLang = pl;
+    var pt = localStorage.getItem("pennora_theme");
+    if (pt === "dark" || pt === "light") currentTheme = pt;
+  } catch(e){}
+  document.documentElement.setAttribute("data-theme", currentTheme);
+
+  buildToolNav();
+  activateFromHash();
+  window.addEventListener("hashchange", activateFromHash);
+  renderBooks();
+  applyLang();
+
+  // listeners
+  getEl("langBtn").addEventListener("click", function(){
+    currentLang = currentLang === "en" ? "zh" : "en";
+    try { localStorage.setItem("pennora_lang", currentLang); } catch(e){}
+    applyLang();
+  });
+  getEl("themeBtn").addEventListener("click", function(){
+    currentTheme = currentTheme === "light" ? "dark" : "light";
+    document.documentElement.setAttribute("data-theme", currentTheme);
+    try { localStorage.setItem("pennora_theme", currentTheme); } catch(e){}
+  });
+
+  getEl("ci_btn").addEventListener("click", function(){ markDone("ci_result"); renderCompound(); });
+  getEl("sg_btn").addEventListener("click", function(){ markDone("sg_result"); renderGoal(); });
+  getEl("py_btn").addEventListener("click", function(){ markDone("py_result"); renderPaycheck(); });
+  getEl("tx_btn").addEventListener("click", function(){ markDone("tx_result"); renderIncomeTax(); });
+  getEl("in_btn").addEventListener("click", function(){ markDone("in_result"); renderInfl(); });
+  getEl("ef_btn").addEventListener("click", function(){ markDone("ef_result"); renderEF(); });
+  getEl("fire_btn").addEventListener("click", function(){ markDone("fire_result"); renderFIRE(); });
+  getEl("nw_btn").addEventListener("click", function(){ markDone("nw_result"); renderNetWorth(); });
+  getEl("am_btn").addEventListener("click", function(){ markDone("am_result"); renderAmortization(); });
+  getEl("ln_btn").addEventListener("click", function(){ markDone("ln_result"); renderLoan(); });
+
+  // inflation toggles update results immediately (auto-calculate on toggle)
+  ["ci_adjust_inf","ci_inf"].forEach(function(id){
+    var el = getEl(id);
+    if (el) el.addEventListener("change", function(){ markDone("ci_result"); renderCompound(); });
+  });
+  ["fr_adjust_inf","fr_inf"].forEach(function(id){
+    var el = getEl(id);
+    if (el) el.addEventListener("change", function(){ markDone("fire_result"); renderFIRE(); });
+  });
+
+  // populate initial example so the page is alive
+  markDone("ci_result"); renderCompound();
+  markDone("py_result"); renderPaycheck();
+  markDone("tx_result"); renderIncomeTax();
+  markDone("nw_result"); renderNetWorth();
+  markDone("am_result"); renderAmortization();
+  markDone("ln_result"); renderLoan();
+}
+if (typeof document !== "undefined"){
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init);
+  else init();
+}
+
+/* export for testing */
+var API = { calcCompound:calcCompound, calcGoal:calcGoal, calcPaycheck:calcPaycheck, calcIncomeTax:calcIncomeTax, bracketTax:bracketTax, marginalRate:marginalRate, calcInfl:calcInfl, calcEF:calcEF, calcFIRE:calcFIRE, calcNetWorth:calcNetWorth, amortize:amortize, calcAmortization:calcAmortization, calcLoan:calcLoan, medianForAge:medianForAge, estPercentile:estPercentile, svgLineChart:svgLineChart, svgBarChart:svgBarChart, I18N:I18N };
+if (typeof module !== "undefined" && module.exports) module.exports = API;
+if (typeof globalThis !== "undefined") globalThis.__pennora = API;
+</script>
+</body>
+</html>
