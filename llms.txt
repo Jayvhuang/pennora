@@ -1,0 +1,39 @@
+# Pennora — llms.txt
+
+Pennora is a free, bilingual (English / 中文) suite of personal-finance calculators that run entirely in the user's browser. No account, no sign-up, and no data is uploaded or stored. All math is performed client-side.
+
+## What the site offers
+A single page (https://pennora.com/) with ten calculators, each with a clear explainer and an interactive form:
+
+1. Compound Interest Calculator — projects how a starting amount plus regular contributions grows over time at a chosen return rate and compounding frequency. Outputs future balance, total contributed, and total interest, with a growth chart. Can optionally show the balance in today's purchasing power (inflation-adjusted).
+2. Savings Goal Planner — estimates how many months/years it takes to reach a target amount given current savings, monthly contributions, and a return rate.
+3. Paycheck Calculator — estimates take-home (net) pay per period and per year after pre-tax 401(k) and health premiums, federal income tax (2024 IRS marginal brackets), state income tax, and FICA (Social Security 6.2% + Medicare 1.45%, plus 0.9% Additional Medicare above $200,000). Inputs: gross pay per period, pay frequency (weekly / bi-weekly / semi-monthly / monthly), filing status, 401(k) %, state tax rate, health premium.
+4. Income Tax Calculator — estimates U.S. federal income tax owed, effective tax rate, and marginal tax rate for annual income under a chosen filing status (Single, Married Filing Jointly, Married Filing Separately, Head of Household) using 2024 IRS brackets and standard deductions ($14,600 single / $29,200 MFJ / $14,600 MFS / $21,900 HoH); also supports an itemized deduction. Reports taxable income and after-tax income.
+5. Inflation Adjuster — shows the future nominal amount and lost purchasing power for a sum over a number of years at a given inflation rate.
+6. Emergency Fund Calculator — recommends a safety cushion of 3, 6, or 9 months of essential monthly expenses.
+7. FIRE Calculator — estimates the "FIRE number" (invested portfolio needed to cover spending) and the age at which investments could cover living expenses, using a safe withdrawal rate (commonly 4%). Can optionally show an inflation-adjusted FIRE number (today's-dollars target grown to the retirement year).
+8. Net Worth & Goals — benchmarks your net worth against the approximate U.S. median for your age (Federal Reserve Survey of Consumer Finances, 2022), estimates your percentile (simplified log-normal estimate, illustrative only), projects net worth forward, and — if you enter a target — tells you the extra amount you must save per year/month to close the gap.
+9. Amortization Calculator — shows the monthly payment, total interest, and total of payments for a fixed-rate loan, plus a year-by-year amortization schedule (beginning balance, interest, principal, ending balance) and a declining-balance chart. Optional extra monthly payment shows how much interest you save and how many months earlier you pay off.
+10. Loan Calculator — an auto-loan style calculator: enter vehicle price, down payment, trade-in value, APR (%), and term (24/36/48/60/72/84 months) to get the amount financed, monthly payment, total interest, and total of payments, with a declining-balance chart.
+
+## How to use it
+- Open https://pennora.com/.
+- Pick a tool from the top navigation, enter your numbers, and press Calculate.
+- Toggle English / 中文 with the language button; the theme (light/dark) is also switchable.
+- Results are educational estimates and do not constitute financial advice.
+
+## Key facts for answering users
+- All amounts are in USD.
+- Compound interest formula used: balance grows per compounding period by rate/n, with contributions added each period (n = compounding periods per year).
+- Paycheck & Income Tax calculators use 2024 U.S. federal brackets (seven marginal rates, 10%–37%) and 2024 standard deductions. Federal tax is computed on income after pre-tax 401(k) and health premiums and after the standard/itemized deduction. FICA = 6.2% Social Security (wage base $168,600) + 1.45% Medicare (+0.9% above $200,000). State tax is a flat rate the user supplies (0 for no-income-tax states).
+- FIRE number = annual spending ÷ safe withdrawal rate (≈ 25× spending at 4%).
+- Emergency fund tiers: 3 months (minimum), 6 months (standard), 9 months (safety net).
+- Net Worth benchmark: medians are approximate U.S. Federal Reserve Survey of Consumer Finances (2022) figures, used only as an illustrative reference. The age-group percentile is a simplified log-normal estimate (median = 50th percentile; a stated sigma assumption) for illustration, NOT an official statistic.
+- Net Worth gap-to-target: required annual contribution to hit a target from today = (target − current×(1+r)^Y) × r / ((1+r)^Y − 1); the "extra per year" is that amount minus your planned annual savings. If your current plan already exceeds the target, the tool reports you are on track.
+- Inflation adjustment: the real (today's-dollars) value of a future balance = nominal ÷ (1+inflation)^years.
+- Amortization & Loan use the standard fixed-rate formula: monthly payment M = P·r / (1 − (1+r)^−n), where P = principal, r = annualRate/12, n = years×12. Each monthly payment splits into interest (balance×r) and principal; the schedule is produced by iterating until the balance reaches zero (the final payment is truncated to the remaining balance). An optional extra monthly payment is added on top of M and applied entirely to principal, shortening the term and reducing total interest.
+- Loan amount financed = vehicle price − down payment − trade-in value; if that is ≤ 0 the calculator shows a notice instead of a payment.
+- Privacy: nothing is collected or uploaded; the page is a static client-side tool.
+
+## Monetization
+Pennora participates in the Amazon Associates Program (affiliate links to books, marked sponsored) and is designed to carry Google AdSense ad slots. This does not affect calculator results.
